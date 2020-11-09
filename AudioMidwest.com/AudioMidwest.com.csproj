@@ -75,6 +75,7 @@
     <Content Include="Content\Bootstrap\bootstrap-reboot.min.css" />
     <Content Include="Content\Bootstrap\bootstrap.css" />
     <Content Include="Content\Bootstrap\bootstrap.min.css" />
+    <Content Include="Content\CSS\home_styles.css" />
     <Content Include="home.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -215,7 +216,6 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\CSS\" />
     <Folder Include="Content\Images\" />
   </ItemGroup>
   <PropertyGroup>
