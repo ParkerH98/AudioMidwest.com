@@ -1,17 +1,76 @@
 ﻿
 /*NEEDED FOR THIS PAGE*/
 
-
+/*formats paragraph*/
 .justify{
     text-align: justify;
     text-align-last: center;
 }
 
+.squeeze {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
 
+.no-margin{
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
 /*END NEEDED FOR THIS PAGE*/
 
 
 /*NEEDED FOR ALL PAGES*/
 
+html, body {
+    /* disallows horizontal scrolling*/
+    max-width: 100%;
+    overflow-x: hidden;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+hr {
+    /*same color as navabr/footer*/
+    color: #212529;
+    height: .25rem;
+}
+
+/*sets text color of all paragraphs*/
+p {
+    font-family: 'Roboto', sans-serif;
+
+    /*same color as navabr/footer*/
+    color: #212529;
+}
+
+/*sets footer text color*/
+footer p, footer ul li a {
+    color: rgba(255, 255, 255, .5);
+}
+
+/*sets footer anchor hover color*/
+footer a:hover{
+    color: rgb(255, 255, 255);
+}
+
+/*background color for jumbotron*/
+.blue{
+    background-color: rgb(159, 202, 225);
+}
+
+.list-style, footer ul a {
+    list-style: none;
+    list-style-position: inside;
+}
 /*END NEEDED FOR ALL PAGES*/
 
