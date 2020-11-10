@@ -1,12 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="AudioMidwest.com.home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="AudioMidwest.com.login" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head runat="server">
 
-    <title>Audio Midwest</title>
+    <title>Login</title>
 
     <%-- Bootstrap --%>
     <script src="Scripts/jquery-3.5.1.min.js"></script>
@@ -20,10 +19,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet"/> 
 
     <%-- main style sheet --%>
-    <link href="Content/CSS/home_styles.css" rel="stylesheet" />
+    <link href="Content/CSS/login_styles.css" rel="stylesheet" />
 
 </head>
-
 <body>
     <form id="form1" runat="server">
 
@@ -97,32 +95,80 @@
 
             <hr />
 
-            <%-- paragraph row --%>
-            <div class="row mt-5 mb-5">
+            <div class="row space">
 
-                <div class="col-sm-6 text-center">
+                    <div class="col-sm-3 text-right">
+                        <label class="col-form-label">User Name</label>
+                    </div>
 
-                    <h3 class="text-center">Car Audio</h3>
-                    <p class="justify squeeze">
-                        Audio, Video, or Remote Start, we are your local 12-volt expert. From subwoofers to in-car
-                        entertainment systems, our expert installers can customize
-                        a mind-blowing system for your vehicle. Whether you want big sound or a remote start, we can
-                        help.
-                    </p>
+                    <div class="col-sm-6">
+                        <asp:TextBox ID="tboxUserName" class="form-control" runat="server"
+                            ControlToValidate="tboxUserName"></asp:TextBox>
+                        <small>
+                            <asp:RequiredFieldValidator ID="rfvUserName" runat="server"
+                                ErrorMessage="Please enter your user name." ControlToValidate="tboxUserName"
+                                ForeColor="Red"></asp:RequiredFieldValidator>
+                        </small>
+                    </div>
 
                 </div>
 
-                <div class="col-sm-6 text-center">
+                <div class="row space">
 
-                    <h2 class="text-center">Home Audio</h2>
-                    <p class="justify squeeze">
-                        4K, OLED, or Smart TVs, our home theater experts can recommend and install the best in living
-                        room entertainment. We hang TVs of any size and only sell the best. If you’re looking for
-                        surround sound,
-                        we have the latest in discreet, in-ceiling solutions and hi-fi.
-                    </p>
+                    <div class="col-sm-3 text-right">
+                        <label class="col-form-label">Password</label>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <asp:TextBox ID="tboxPassword" class="form-control" TextMode="Password" runat="server"></asp:TextBox>
+
+                        <small>
+                            <asp:RequiredFieldValidator ID="rfvPassword" runat="server"
+                                ErrorMessage="Please enter a valid password." ControlToValidate="tboxPassword"
+                                ForeColor="Red"></asp:RequiredFieldValidator>
+                        </small>
+                    </div>
+
                 </div>
-            </div>
+
+                <div class="row">
+
+                    <div class="col-sm-6 text-right">
+
+                        
+
+                    </div>
+
+                    <div class="col-sm-6 offset-sm-6">
+                        <asp:Button ID="btnValidator" runat="server" class="btn btn-primary" Text="Login"/>
+                        <asp:Button ID="btnCreateAccoount" runat="server" class="btn btn-secondary"
+                            Text="Create Account" CausesValidation="False" />
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-6 offset-sm-4 text-center mt-3">
+
+
+                        <asp:Label ID="lblMessage" runat="server" Text="" class="col-form-label-sm"></asp:Label>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
         <%-- end of main container div --%>
 
@@ -222,5 +268,4 @@
         </div>
     </form>
 </body>
-
 </html>
