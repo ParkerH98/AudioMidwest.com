@@ -140,7 +140,7 @@
                     </div>
 
                     <div class="col-sm-6 offset-sm-6">
-                        <asp:Button ID="btnValidator" runat="server" class="btn btn-primary" Text="Login"/>
+                        <asp:Button ID="btnValidator" runat="server" class="btn btn-primary" Text="Login" OnClick="btnValidator_Click"/>
                         <asp:Button ID="btnCreateAccoount" runat="server" class="btn btn-secondary"
                             Text="Create Account" CausesValidation="False" />
                     </div>
