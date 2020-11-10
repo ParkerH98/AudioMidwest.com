@@ -67,9 +67,9 @@
                                 Account
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Login</a>
-                                <a class="dropdown-item" href="#">Create Account</a>
-                                <a class="dropdown-item" href="#">Modify Account</a>
+                                <a class="dropdown-item" href="login.aspx">Login</a>
+                                <a class="dropdown-item" href="accountCreation.aspx">Create Account</a>
+                                <a class="dropdown-item" href="accountModification.aspx">Modify Account</a>
                                 <button type="button" class="btn btn-outline-dark dropdown-item">Sign Out</button>
                             </div>
                         </li>
@@ -140,7 +140,7 @@
                     </div>
 
                     <div class="col-sm-6 offset-sm-6">
-                        <asp:Button ID="btnValidator" runat="server" class="btn btn-primary" Text="Login" OnClick="btnValidator_Click"/>
+                        <asp:Button ID="btnLogin" runat="server" class="btn btn-primary" Text="Login" OnClick="btnLogin_Click"/>
                         <asp:Button ID="btnCreateAccoount" runat="server" class="btn btn-secondary"
                             Text="Create Account" CausesValidation="False" />
                     </div>

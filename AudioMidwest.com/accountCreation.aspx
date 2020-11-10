@@ -67,9 +67,9 @@
                                 Account
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Login</a>
-                                <a class="dropdown-item" href="#">Create Account</a>
-                                <a class="dropdown-item" href="#">Modify Account</a>
+                                <a class="dropdown-item" href="login.aspx">Login</a>
+                                <a class="dropdown-item" href="accountCreation.aspx">Create Account</a>
+                                <a class="dropdown-item" href="accountModification.aspx">Modify Account</a>
                                 <button type="button" class="btn btn-outline-dark dropdown-item">Sign Out</button>
                             </div>
                         </li>
@@ -484,12 +484,10 @@
             <div class="row mb-5 mt-3">
 
                 <div class="col-sm-4 offset-sm-6">
-                    <asp:Button ID="btnValidator" runat="server" Text="Create Account" class="btn btn-dark"
-                        />
+                    <asp:Button ID="btnCreateAcct" runat="server" Text="Create Account" class="btn btn-dark" OnClick="btnCreateAcct_Click"/>
                 </div>
 
             </div>
-
 
         </div>
         <%-- end of main container div --%>

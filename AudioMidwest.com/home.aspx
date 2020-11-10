@@ -69,9 +69,9 @@
                                 Account
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Login</a>
-                                <a class="dropdown-item" href="#">Create Account</a>
-                                <a class="dropdown-item" href="#">Modify Account</a>
+                                <a class="dropdown-item" href="login.aspx">Login</a>
+                                <a class="dropdown-item" href="accountCreation.aspx">Create Account</a>
+                                <a class="dropdown-item" href="accountModification.aspx">Modify Account</a>
                                 <button type="button" class="btn btn-outline-dark dropdown-item">Sign Out</button>
                             </div>
                         </li>
