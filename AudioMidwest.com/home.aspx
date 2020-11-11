@@ -69,10 +69,10 @@
                                 Account
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="login.aspx">Login</a>
-                                <a class="dropdown-item" href="accountCreation.aspx">Create Account</a>
-                                <a class="dropdown-item" href="accountModification.aspx">Modify Account</a>
-                                <button type="button" class="btn btn-outline-dark dropdown-item">Sign Out</button>
+                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx" runat="server">Login</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD" NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD" NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
+                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click" NavigateUrl="login.aspx" />
                             </div>
                         </li>
                     </ul>

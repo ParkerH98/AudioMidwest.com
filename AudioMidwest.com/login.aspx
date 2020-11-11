@@ -67,10 +67,10 @@
                                 Account
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="login.aspx">Login</a>
-                                <a class="dropdown-item" href="accountCreation.aspx">Create Account</a>
-                                <a class="dropdown-item" href="accountModification.aspx">Modify Account</a>
-                                <button type="button" class="btn btn-outline-dark dropdown-item">Sign Out</button>
+                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx" runat="server">Login</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD" NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD" NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
+                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click" NavigateUrl="login.aspx" />
                             </div>
                         </li>
                     </ul>
@@ -148,10 +148,10 @@
 
                 <div class="row">
 
-                    <div class="col-sm-6 offset-sm-4 text-center mt-3">
+                    <div class="col-sm-12 text-center text-muted font-weight-bold mt-3 mb-5">
 
 
-                        <asp:Label ID="lblMessage" runat="server" Text="" class="col-form-label-sm"></asp:Label>
+                        <asp:Label ID="lblMessage" runat="server" Text="A test string that gives information to the user about a certain thing." class="col-form-label-sm"></asp:Label>
 
                     </div>
 
