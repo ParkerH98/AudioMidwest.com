@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="AudioMidwest.com.home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="products.aspx.cs" Inherits="AudioMidwest.com.products" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
-    <title>Audio Midwest</title>
+    <title>Products</title>
 
     <%-- Bootstrap --%>
     <script src="Scripts/jquery-3.5.1.min.js"></script>
@@ -19,10 +19,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet"/> 
 
     <%-- main style sheet --%>
-    <link href="Content/CSS/home_styles.css" rel="stylesheet" />
+    <link href="Content/CSS/products_styles.css" rel="stylesheet" />
 
 </head>
-
 <body>
     <form id="form1" runat="server">
 
@@ -96,32 +95,56 @@
 
             <hr />
 
-            <%-- paragraph row --%>
-            <div class="row mt-5 mb-5">
+            <div class="row">
 
-                <div class="col-sm-6 text-center">
+                <div class="col-sm-4">
 
-                    <h3 class="text-center">Car Audio</h3>
-                    <p class="justify squeeze">
-                        Audio, Video, or Remote Start, we are your local 12-volt expert. From subwoofers to in-car
-                        entertainment systems, our expert installers can customize
-                        a mind-blowing system for your vehicle. Whether you want big sound or a remote start, we can
-                        help.
-                    </p>
+                    <div class="card mb-3">
+                      <img class="card-img-top" src="..." alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Focal</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
 
                 </div>
 
-                <div class="col-sm-6 text-center">
+                <div class="col-sm-4">
 
-                    <h2 class="text-center">Home Audio</h2>
-                    <p class="justify squeeze">
-                        4K, OLED, or Smart TVs, our home theater experts can recommend and install the best in living
-                        room entertainment. We hang TVs of any size and only sell the best. If you’re looking for
-                        surround sound,
-                        we have the latest in discreet, in-ceiling solutions and hi-fi.
-                    </p>
+                    <div class="card mb-3">
+                      <img class="card-img-top" src="..." alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Kicker</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-4">
+
+                    <div class="card mb-3">
+                      <img class="card-img-top" src="..." alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Phoenix</h5>
+                        <p class="card-text"></p>
+                        <p class="card-text"><small class="text-muted">$544.99</small></p>
+                      </div>
+                    </div>
+
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
         </div>
         <%-- end of main container div --%>
 
@@ -221,5 +244,4 @@
         </div>
     </form>
 </body>
-
 </html>

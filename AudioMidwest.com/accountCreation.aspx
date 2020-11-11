@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
-    <title>Login</title>
+    <title>Create Account</title>
 
     <%-- Bootstrap --%>
     <script src="Scripts/jquery-3.5.1.min.js"></script>
@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet"/> 
 
     <%-- main style sheet --%>
-    <link href="Content/CSS/login_styles.css" rel="stylesheet" />
+    <link href="Content/CSS/accountCreation_styles.css" rel="stylesheet" />
 
 </head>
 <body>

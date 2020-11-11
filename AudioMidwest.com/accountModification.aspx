@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet"/> 
 
     <%-- main style sheet --%>
-    <link href="Content/CSS/login_styles.css" rel="stylesheet" />
+    <link href="Content/CSS/accountModification_styles.css" rel="stylesheet" />
 
 </head>
 <body>
