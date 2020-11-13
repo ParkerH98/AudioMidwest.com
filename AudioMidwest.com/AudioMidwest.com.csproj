@@ -74,6 +74,7 @@
   <ItemGroup>
     <Content Include="accountCreation.aspx" />
     <Content Include="accountModification.aspx" />
+    <Content Include="cart.aspx" />
     <Content Include="Content\Bootstrap\bootstrap-grid.css" />
     <Content Include="Content\Bootstrap\bootstrap-grid.min.css" />
     <Content Include="Content\Bootstrap\bootstrap-reboot.css" />
@@ -97,6 +98,7 @@
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
     <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\format.js" />
     <Content Include="Scripts\index.js.flow" />
     <Content Include="Scripts\esm\popper.min.js.map" />
     <Content Include="Scripts\esm\popper.js.map" />
@@ -214,6 +216,13 @@
     </Compile>
     <Compile Include="accountModification.aspx.designer.cs">
       <DependentUpon>accountModification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cart.aspx.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cart.aspx.designer.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Content\Classes\CartItem.cs" />
     <Compile Include="Content\Classes\CartItemList.cs" />

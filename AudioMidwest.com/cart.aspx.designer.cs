@@ -11,7 +11,7 @@ namespace AudioMidwest.com
 {
 
 
-    public partial class products
+    public partial class cart
     {
 
         /// <summary>
@@ -58,41 +58,5 @@ namespace AudioMidwest.com
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSignOut;
-
-        /// <summary>
-        /// tboxSpeakerFocal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tboxSpeakerFocal;
-
-        /// <summary>
-        /// btnSpeakerFocal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSpeakerFocal;
-
-        /// <summary>
-        /// rfvSpeakerFocal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSpeakerFocal;
-
-        /// <summary>
-        /// rngFocalSpeaker control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator rngFocalSpeaker;
     }
 }

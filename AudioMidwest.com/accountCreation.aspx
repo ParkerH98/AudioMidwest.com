@@ -588,4 +588,5 @@
         </div>
     </form>
 </body>
+<script src="Scripts/format.js"></script>
 </html>

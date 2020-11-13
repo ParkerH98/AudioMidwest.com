@@ -1,6 +1,16 @@
 ﻿
 /*NEEDED FOR THIS PAGE*/
 
+.bottom{
+    position: absolute;
+    bottom: 0;
+}
+
+.height{
+    
+    height : 30rem;
+}
+
 /*END NEEDED FOR THIS PAGE*/
 
 

@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
 
     <title>Products</title>
@@ -15,13 +16,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <%-- google fonts --%>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet" />
 
     <%-- main style sheet --%>
     <link href="Content/CSS/products_styles.css" rel="stylesheet" />
 
 </head>
+
 <body>
     <form id="form1" runat="server">
 
@@ -67,10 +71,15 @@
                                 Account
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx" runat="server">Login</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD" NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD" NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
-                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click" NavigateUrl="login.aspx" />
+                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx"
+                                    runat="server">Login</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD"
+                                    NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD"
+                                    NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
+                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out"
+                                    CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click"
+                                    NavigateUrl="login.aspx" />
                             </div>
                         </li>
                     </ul>
@@ -99,13 +108,61 @@
 
                 <div class="col-sm-4">
 
+                    <div class="card mb-3 height position-relative">
+                        <img class="card-img-top" src="..." alt="Card image cap" />
+                        <div class="card-body position-relative">
+                            <h5 class="card-title">Focal</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+
+                        <%-- div @ bottom of card body --%>
+                        <div class="bottom">
+
+                            <div class="row">
+
+                                <div class="col-sm-12">
+
+                                    <label class="d-block">Quantity:</label>
+                                    <asp:TextBox ID="tboxSpeakerFocal" CssClass="d-block w-75" runat="server"
+                                        ValidationGroup="tboxSpeakerFocal"></asp:TextBox>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-sm-6">
+                                    <asp:Button ID="btnSpeakerFocal" CssClass="btn btn-primary" runat="server"
+                                        Text="Add to Cart" ValidationGroup="btnSpeakerFocal" OnClick="btnSpeakerFocal_Click" />
+                                </div>
+
+                                <div class="col-sm-6">
+
+                                    <asp:RequiredFieldValidator ID="rfvSpeakerFocal" runat="server"
+                                        ErrorMessage="Please enter a quantity." ControlToValidate="tboxSpeakerFocal"
+                                        ValidationGroup="SpeakerFocal" Display="Dynamic"></asp:RequiredFieldValidator>
+                                    <asp:RangeValidator ID="rngFocalSpeaker" runat="server"
+                                        ErrorMessage="Please enter a number between 1 adn 10."
+                                        ValidationGroup="btnSpeakerFocal" ControlToValidate="tboxSpeakerFocal" Display="Dynamic">
+                                    </asp:RangeValidator>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+
                     <div class="card mb-3">
-                      <img class="card-img-top" src="..." alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">Focal</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                      </div>
+                        <img class="card-img-top" src="..." alt="Card image cap"/>
+                        <div class="card-body">
+                            <h5 class="card-title">Kicker</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
                     </div>
 
                 </div>
@@ -113,32 +170,16 @@
                 <div class="col-sm-4">
 
                     <div class="card mb-3">
-                      <img class="card-img-top" src="..." alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">Kicker</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                      </div>
-                    </div>
-
-                </div>
-
-                <div class="col-sm-4">
-
-                    <div class="card mb-3">
-                      <img class="card-img-top" src="..." alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">Phoenix</h5>
-                        <p class="card-text"></p>
-                        <p class="card-text"><small class="text-muted">$544.99</small></p>
-                      </div>
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Phoenix</h5>
+                            <p class="card-text"></p>
+                            <p class="card-text"><small class="text-muted">$544.99</small></p>
+                        </div>
                     </div>
 
                 </div>
             </div>
-
-
-
 
 
 
@@ -244,4 +285,5 @@
         </div>
     </form>
 </body>
+
 </html>

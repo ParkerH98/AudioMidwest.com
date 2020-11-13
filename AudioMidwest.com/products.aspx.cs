@@ -47,5 +47,10 @@ namespace AudioMidwest.com
 
             Response.Redirect("~/login.aspx");
         }
+
+        protected void btnSpeakerFocal_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/cart.aspx");
+        }
     }
 }

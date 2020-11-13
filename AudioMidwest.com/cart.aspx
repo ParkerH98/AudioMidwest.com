@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="AudioMidwest.com.home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cart.aspx.cs" Inherits="AudioMidwest.com.cart" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
-    <title>Audio Midwest</title>
+    <title>Products</title>
 
     <%-- Bootstrap --%>
     <script src="Scripts/jquery-3.5.1.min.js"></script>
@@ -15,14 +15,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <%-- google fonts --%>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet" />
 
     <%-- main style sheet --%>
-    <link href="Content/CSS/home_styles.css" rel="stylesheet" />
+    <link href="Content/CSS/products_styles.css" rel="stylesheet" />
 
 </head>
-
 <body>
     <form id="form1" runat="server">
 
@@ -68,10 +69,15 @@
                                 Account
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx" runat="server">Login</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD" NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD" NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
-                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click" NavigateUrl="login.aspx" />
+                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx"
+                                    runat="server">Login</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD"
+                                    NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD"
+                                    NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
+                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out"
+                                    CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click"
+                                    NavigateUrl="login.aspx" />
                             </div>
                         </li>
                     </ul>
@@ -96,32 +102,20 @@
 
             <hr />
 
-            <%-- paragraph row --%>
-            <div class="row mt-5 mb-5">
+       
 
-                <div class="col-sm-6 text-center">
 
-                    <h2h class="text-center">Car Audio</h2h>
-                    <p class="justify squeeze">
-                        Audio, Video, or Remote Start, we are your local 12-volt expert. From subwoofers to in-car
-                        entertainment systems, our expert installers can customize
-                        a mind-blowing system for your vehicle. Whether you want big sound or a remote start, we can
-                        help.
-                    </p>
 
-                </div>
 
-                <div class="col-sm-6 text-center">
 
-                    <h2 class="text-center">Home Audio</h2>
-                    <p class="justify squeeze">
-                        4K, OLED, or Smart TVs, our home theater experts can recommend and install the best in living
-                        room entertainment. We hang TVs of any size and only sell the best. If you’re looking for
-                        surround sound,
-                        we have the latest in discreet, in-ceiling solutions and hi-fi.
-                    </p>
-                </div>
-            </div>
+
+
+
+
+
+
+
+
         </div>
         <%-- end of main container div --%>
 
@@ -221,5 +215,4 @@
         </div>
     </form>
 </body>
-
 </html>
