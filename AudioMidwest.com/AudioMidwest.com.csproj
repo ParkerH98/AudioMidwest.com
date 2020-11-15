@@ -83,6 +83,7 @@
     <Content Include="Content\Bootstrap\bootstrap.min.css" />
     <Content Include="Content\CSS\accountCreation_styles.css" />
     <Content Include="Content\CSS\accountModification_styles.css" />
+    <Content Include="Content\CSS\cart_styles.css" />
     <Content Include="Content\CSS\login_styles.css" />
     <Content Include="Content\CSS\products_styles.css" />
     <Content Include="Content\Images\amLogo.jpg" />

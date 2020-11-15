@@ -119,6 +119,7 @@
 
                         <%-- div @ bottom of card body --%>
                         <div class="bottom">
+                            <asp:HiddenField ID="hidSpeakerFocal" Value="1" runat="server" />
 
                             <div class="row">
 
@@ -126,7 +127,7 @@
 
                                     <label class="d-block">Quantity:</label>
                                     <asp:TextBox ID="tboxSpeakerFocal" CssClass="d-block w-75" runat="server"
-                                        ValidationGroup="tboxSpeakerFocal"></asp:TextBox>
+                                        ValidationGroup="" TextMode="Number"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -134,18 +135,15 @@
 
                                 <div class="col-sm-6">
                                     <asp:Button ID="btnSpeakerFocal" CssClass="btn btn-primary" runat="server"
-                                        Text="Add to Cart" ValidationGroup="btnSpeakerFocal" OnClick="btnSpeakerFocal_Click" />
+                                        Text="Add to Cart" ValidationGroup="" OnClick="btnSpeakerFocal_Click" />
                                 </div>
 
                                 <div class="col-sm-6">
 
                                     <asp:RequiredFieldValidator ID="rfvSpeakerFocal" runat="server"
                                         ErrorMessage="Please enter a quantity." ControlToValidate="tboxSpeakerFocal"
-                                        ValidationGroup="SpeakerFocal" Display="Dynamic"></asp:RequiredFieldValidator>
-                                    <asp:RangeValidator ID="rngFocalSpeaker" runat="server"
-                                        ErrorMessage="Please enter a number between 1 adn 10."
-                                        ValidationGroup="btnSpeakerFocal" ControlToValidate="tboxSpeakerFocal" Display="Dynamic">
-                                    </asp:RangeValidator>
+                                        ValidationGroup="" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+                                  
 
                                 </div>
                             </div>
@@ -153,33 +151,9 @@
                     </div>
                 </div>
 
-                <div class="col-sm-4">
+             
 
-                    <div class="card mb-3">
-                        <img class="card-img-top" src="..." alt="Card image cap"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Kicker</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-sm-4">
-
-                    <div class="card mb-3">
-                        <img class="card-img-top" src="..." alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Phoenix</h5>
-                            <p class="card-text"></p>
-                            <p class="card-text"><small class="text-muted">$544.99</small></p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+     
 
 
 

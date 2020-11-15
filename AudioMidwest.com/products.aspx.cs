@@ -4,11 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace AudioMidwest.com
 {
     public partial class products : System.Web.UI.Page
     {
+        private Product selectedProduct;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["currentUser"] != null)
@@ -50,7 +55,79 @@ namespace AudioMidwest.com
 
         protected void btnSpeakerFocal_Click(object sender, EventArgs e)
         {
+
+            selectedProduct = GetSelectedProduct(Convert.ToInt32(hidSpeakerFocal.Value));
+
+            if (IsValid)
+            {
+                //get cart from session state
+                CartItemList shoppingCart = CartItemList.GetCart();
+                CartItem cartItem = shoppingCart[selectedProduct.ProductID];
+
+                //check if cart is empty & either increase quantity or add to cart
+                if (cartItem == null)
+                {
+                    //add to cart
+                    shoppingCart.AddItem(selectedProduct, Convert.ToInt32(tboxSpeakerFocal.Text));
+                }
+                else
+                {
+                    //product was already in the cart
+                    cartItem.AddQuantity(Convert.ToInt32(tboxSpeakerFocal.Text));
+                }
+            }
+
             Response.Redirect("~/cart.aspx");
+        }
+
+        private Product GetSelectedProduct(int productID)
+        {
+            //creates db connection string
+            string strConnection = ConfigurationManager.ConnectionStrings["F20_ksphagueConnectionString"].ToString();
+
+            using (SqlConnection sqlConnection = new SqlConnection(strConnection))
+            {
+
+                // creates connection to db and selects stored procedure to use
+                SqlDataAdapter sqlDA = new SqlDataAdapter("spSelectProductByID", sqlConnection);
+                sqlDA.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+
+                //parameters for sp
+
+                SqlParameter ProductIdInput = new SqlParameter("@ProductID", hidSpeakerFocal.Value);
+                ProductIdInput.Direction = ParameterDirection.Input;
+                ProductIdInput.DbType = DbType.Int32;
+                sqlDA.SelectCommand.Parameters.Add(ProductIdInput);
+
+                //create dataset to hold results of stored procedure
+                DataSet ds = new DataSet();
+
+                //executes SQL Data Adapter
+                sqlDA.Fill(ds);
+
+
+                Product p = new Product();
+                //if successful
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    p.ProductID = Convert.ToInt32(ds.Tables[0].Rows[0]["ProductID"]);
+                    p.ProductName = ds.Tables[0].Rows[0]["ProductName"].ToString();
+                    p.UnitPrice = Decimal.Parse(ds.Tables[0].Rows[0]["UnitPrice"].ToString());
+                    p.ShortDesc = ds.Tables[0].Rows[0]["ShortDesc"].ToString();
+                    p.LongDesc = ds.Tables[0].Rows[0]["LongDesc"].ToString();
+
+                    int temp = Convert.ToInt32(ds.Tables[0].Rows[0]["ProductAvailability"]);
+                    if (temp == 1) p.ProductAvailability = true;
+                    else p.ProductAvailability = false;
+
+                    p.ProductInventoryQuantity = Convert.ToInt32(ds.Tables[0].Rows[0]["ProductInventoryQuantity"]);
+                    p.ProductCategory = ds.Tables[0].Rows[0]["ProductCategory"].ToString();
+
+                }
+
+                return p;
+            }
         }
     }
 }

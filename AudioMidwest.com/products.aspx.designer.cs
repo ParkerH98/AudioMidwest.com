@@ -60,6 +60,15 @@ namespace AudioMidwest.com
         protected global::System.Web.UI.WebControls.Button btnSignOut;
 
         /// <summary>
+        /// hidSpeakerFocal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hidSpeakerFocal;
+
+        /// <summary>
         /// tboxSpeakerFocal control.
         /// </summary>
         /// <remarks>
@@ -85,14 +94,5 @@ namespace AudioMidwest.com
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSpeakerFocal;
-
-        /// <summary>
-        /// rngFocalSpeaker control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator rngFocalSpeaker;
     }
 }

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
-    <title>Products</title>
+    <title>Cart</title>
 
     <%-- Bootstrap --%>
     <script src="Scripts/jquery-3.5.1.min.js"></script>
@@ -21,7 +21,7 @@
         rel="stylesheet" />
 
     <%-- main style sheet --%>
-    <link href="Content/CSS/products_styles.css" rel="stylesheet" />
+    <link href="Content/CSS/cart_styles.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -105,7 +105,31 @@
        
 
 
+            <div class="row">
 
+                <div class="col-sm-6">
+
+                    <asp:ListBox ID="lboxCartsummary" CssClass="cart" runat="server"></asp:ListBox>
+
+                </div>
+
+                <div class="col-sm-6">
+
+                    <asp:Button ID="btnRemove" CssClass="btn btn-dark mb-2 d-block" runat="server" Text="Remove Item" OnClick="btnRemove_Click" />
+                    <asp:Button ID="btnEmpty" CssClass="btn btn-dark d-block" runat="server" Text="Empty Cart" OnClick="btnEmpty_Click" />
+                </div>
+
+            </div>
+
+            <div class="row mb-5">
+
+                <div class="col-sm-12">
+
+                    <asp:Button ID="btnContinue" CssClass="btn btn-dark mr-1" runat="server" Text="Continue Shopping" OnClick="btnContinue_Click" />
+                    <asp:Button ID="btnCheckout" CssClass="btn btn-secondary" runat="server" Text="Checkout" />
+                </div>
+
+            </div>
 
 
 
