@@ -38,7 +38,7 @@ namespace AudioMidwest.com
             get 
             {
                 foreach (CartItem c in cartItems)
-                    if (c.Product.ProductID.ToString() == id) return c;
+                    if (c.Product.ProductID == id) return c;
                 return null;
             }
         }

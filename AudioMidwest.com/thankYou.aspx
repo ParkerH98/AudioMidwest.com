@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cart.aspx.cs" Inherits="AudioMidwest.com.cart" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="thankYou.aspx.cs" Inherits="AudioMidwest.com.thankYou" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
-    <title>Cart</title>
+    <title>Thank You</title>
 
     <%-- Bootstrap --%>
     <script src="Scripts/jquery-3.5.1.min.js"></script>
@@ -15,13 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <%-- google fonts --%>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet"/> 
 
     <%-- main style sheet --%>
-    <link href="Content/CSS/cart_styles.css" rel="stylesheet" />
+    <link href="Content/CSS/home_styles.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -69,15 +67,10 @@
                                 Account
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx"
-                                    runat="server">Login</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD"
-                                    NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD"
-                                    NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
-                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out"
-                                    CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click"
-                                    NavigateUrl="login.aspx" />
+                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx" runat="server">Login</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD" NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD" NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
+                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click" NavigateUrl="login.aspx" />
                             </div>
                         </li>
                     </ul>
@@ -94,51 +87,22 @@
 
                 <div class="col-sm-12 ml-3">
 
-                    <h1>Welcome to Audio Midwest</h1>
-                    <h2>Sellers and Installers of Premium AV Equipment</h2>
+                    <h1>Thank You</h1>
+                    <h2>We Want to Thank You For Your Purchase</h2>
 
                 </div>
             </div>
 
             <hr />
 
-       
 
+            <div class="row mb-5 mt-3">
 
-            <div class="row">
-
-                <div class="col-sm-6">
-
-                    <asp:ListBox ID="lboxCartsummary" CssClass="cart" runat="server"></asp:ListBox>
-
-                </div>
-
-                <div class="col-sm-6">
-
-                    <asp:Button ID="btnRemove" CssClass="btn btn-dark mb-2 d-block" runat="server" Text="Remove Item" OnClick="btnRemove_Click" />
-                    <asp:Button ID="btnEmpty" CssClass="btn btn-dark d-block" runat="server" Text="Empty Cart" OnClick="btnEmpty_Click" />
+                <div class="col-sm-4 offset-sm-6">
+                    <asp:Button ID="btnSubmit" runat="server" Text="Submit Order" class="btn btn-dark" OnClick="btnSubmit_Click"/>
                 </div>
 
             </div>
-
-            <div class="row mb-5">
-
-                <div class="col-sm-12">
-
-                    <asp:Button ID="btnContinue" CssClass="btn btn-dark mr-1" runat="server" Text="Continue Shopping" OnClick="btnContinue_Click" />
-                    <asp:Button ID="btnCheckout" CssClass="btn btn-secondary" runat="server" Text="Checkout" OnClick="btnCheckout_Click" />
-                </div>
-
-            </div>
-
-
-
-
-
-
-
-
-
 
         </div>
         <%-- end of main container div --%>

@@ -106,15 +106,16 @@
 
             <div class="row">
 
+                <%-- SpeakerFocal --%>
                 <div class="col-sm-4">
 
                     <div class="card mb-3 height position-relative">
-                        <img class="card-img-top" src="..." alt="Card image cap" />
+                        <img class="card-img-top d-block img-fluid mx-auto w-75 h-75" src="Content/Images/speaker_focal.jpg" alt="Card image cap" />
                         <div class="card-body position-relative">
                             <h5 class="card-title">Focal</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                                 additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <p class="card-text"><small class="text-muted">$699.99</small></p>
                         </div>
 
                         <%-- div @ bottom of card body --%>
@@ -122,9 +123,7 @@
                             <asp:HiddenField ID="hidSpeakerFocal" Value="1" runat="server" />
 
                             <div class="row">
-
                                 <div class="col-sm-12">
-
                                     <label class="d-block">Quantity:</label>
                                     <asp:TextBox ID="tboxSpeakerFocal" CssClass="d-block w-75" runat="server"
                                         ValidationGroup="" TextMode="Number"></asp:TextBox>
@@ -132,131 +131,129 @@
                             </div>
 
                             <div class="row">
-
                                 <div class="col-sm-6">
                                     <asp:Button ID="btnSpeakerFocal" CssClass="btn btn-primary" runat="server"
                                         Text="Add to Cart" ValidationGroup="" OnClick="btnSpeakerFocal_Click" />
                                 </div>
 
                                 <div class="col-sm-6">
-
                                     <asp:RequiredFieldValidator ID="rfvSpeakerFocal" runat="server"
                                         ErrorMessage="Please enter a quantity." ControlToValidate="tboxSpeakerFocal"
-                                        ValidationGroup="" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
-                                  
-
+                                        ValidationGroup="" Display="Dynamic" ForeColor="Red">
+                                    </asp:RequiredFieldValidator>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-             
-
-     
+                <%-- End SpeakerFocal --%>
 
 
 
 
 
 
-        </div>
-        <%-- end of main container div --%>
 
-        <%-- footer conatiner --%>
-        <div class="container-fluid px-0">
 
-            <footer class="bg-dark">
 
-                <div class="row pt-3 pb-1">
 
-                    <div class="col-sm-4">
+            </div>
+            <%-- end of main container div --%>
 
-                        <div class="row">
+            <%-- footer conatiner --%>
+            <div class="container-fluid px-0">
 
-                            <div class="col-sm-6 text-center">
+                <footer class="bg-dark">
 
-                                <h4 class="text-white text-uppercase">Stillwater</h4>
-                                <p>(405) 377-6827<br />
-                                    502 E Lakeview Rd<br />
-                                    Stillwater, OK 74075
-                                </p>
+                    <div class="row pt-3 pb-1">
 
-                                <h4 class="text-white text-uppercase">Edmond</h4>
-                                <p>(405) 478-5432<br /> 324 W 33rd St<br /> Edmond, OK 73013</p>
+                        <div class="col-sm-4">
 
+                            <div class="row">
+
+                                <div class="col-sm-6 text-center">
+
+                                    <h4 class="text-white text-uppercase">Stillwater</h4>
+                                    <p>(405) 377-6827<br />
+                                        502 E Lakeview Rd<br />
+                                        Stillwater, OK 74075
+                                    </p>
+
+                                    <h4 class="text-white text-uppercase">Edmond</h4>
+                                    <p>(405) 478-5432<br /> 324 W 33rd St<br /> Edmond, OK 73013</p>
+
+                                </div>
+
+                                <div class="col-sm-6 text-center">
+
+                                    <h4 class="text-white text-uppercase">Hours</h4>
+                                    <p>Mon: 10am &#8211; 6pm<br />
+                                        Tue: 10am &#8211; 6pm<br />
+                                        Wed: 10am &#8211; 6pm<br />
+                                        Thur: 10am &#8211; 6pm<br />
+                                        Fri: 10am &#8211; 6pm<br />
+                                        Sat: 10am &#8211; 5pm<br />
+                                        Sun: Closed
+                                    </p>
+
+                                </div>
                             </div>
+                        </div>
 
-                            <div class="col-sm-6 text-center">
+                        <div class="col-sm-4 offset-sm-4 text-center">
 
-                                <h4 class="text-white text-uppercase">Hours</h4>
-                                <p>Mon: 10am &#8211; 6pm<br />
-                                    Tue: 10am &#8211; 6pm<br />
-                                    Wed: 10am &#8211; 6pm<br />
-                                    Thur: 10am &#8211; 6pm<br />
-                                    Fri: 10am &#8211; 6pm<br />
-                                    Sat: 10am &#8211; 5pm<br />
-                                    Sun: Closed
-                                </p>
+                            <div class="row">
 
+                                <div class="col-sm-6">
+
+                                    <h4 class="text-white text-uppercase">Navigation</h4>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="home.aspx">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="products.aspx">Products</a>
+                                        </li>
+                                        <li>
+                                            <a href="services.aspx">Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="aboutUs.aspx">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact.aspx">Contact</a>
+                                        </li>
+                                        <li>
+                                            <a href="login.aspx">Login</a>
+                                        </li>
+                                        <li>
+                                            <a href="accountModification">Modify Account</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="col-sm-6">
+
+                                    <h4 class="text-white text-uppercase">Social Media</h4>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#!">Facebook</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Twitter</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Instagram</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-sm-4 offset-sm-4 text-center">
-
-                        <div class="row">
-
-                            <div class="col-sm-6">
-
-                                <h4 class="text-white text-uppercase">Navigation</h4>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="home.aspx">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="products.aspx">Products</a>
-                                    </li>
-                                    <li>
-                                        <a href="services.aspx">Services</a>
-                                    </li>
-                                    <li>
-                                        <a href="aboutUs.aspx">About Us</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.aspx">Contact</a>
-                                    </li>
-                                    <li>
-                                        <a href="login.aspx">Login</a>
-                                    </li>
-                                    <li>
-                                        <a href="accountModification">Modify Account</a>
-                                    </li>
-                                </ul>
-
-                            </div>
-
-                            <div class="col-sm-6">
-
-                                <h4 class="text-white text-uppercase">Social Media</h4>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#!">Facebook</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Twitter</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Instagram</a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </div>
+                </footer>
+            </div>
     </form>
 </body>
 

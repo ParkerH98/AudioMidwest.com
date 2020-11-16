@@ -31,6 +31,12 @@ namespace AudioMidwest.com
                 CreateAcctDD.Visible = true;
             }
 
+            if (Session["logMsg"] != null)
+            {
+                lblMessage.Text = Session["logMsg"].ToString();
+                Session["logMsg"] = null;
+            }
+
             if (!IsPostBack)
             {
                 if (Session["SignOutMsg"] != null)
@@ -92,8 +98,17 @@ namespace AudioMidwest.com
 
                     Session["currentUser"] = currentUser;
 
+                    // if logged in go to shipping
+                    // else go to home like normal
                     Session["loggedIn"] = "true";
-                    Response.Redirect("~/home.aspx");
+                    if (Session["shopping"].ToString() == "true")
+                    {
+                        Response.Redirect("~/shipping.aspx");
+                    }
+                    else
+                    {
+                        Response.Redirect("~/home.aspx");
+                    }
                 }
                 else
                 {

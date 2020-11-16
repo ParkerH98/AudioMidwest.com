@@ -97,5 +97,21 @@ namespace AudioMidwest.com
                 lboxCartsummary.Items.Clear();
             }
         }
+
+        protected void btnCheckout_Click(object sender, EventArgs e)
+        {
+
+            if (Session["currentUser"] != null)
+            {
+                Response.Redirect("~/shipping.aspx");
+            }
+            else
+            {
+                Session["logMsg"] = "Please login before continuing to checkout,";
+                Response.Redirect("~/login.aspx");
+            }
+
+           
+        }
     }
 }

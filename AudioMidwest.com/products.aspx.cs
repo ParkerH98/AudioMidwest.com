@@ -55,7 +55,7 @@ namespace AudioMidwest.com
 
         protected void btnSpeakerFocal_Click(object sender, EventArgs e)
         {
-
+            Session["shopping"] = "true";
             selectedProduct = GetSelectedProduct(Convert.ToInt32(hidSpeakerFocal.Value));
 
             if (IsValid)
@@ -111,7 +111,7 @@ namespace AudioMidwest.com
                 //if successful
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-                    p.ProductID = Convert.ToInt32(ds.Tables[0].Rows[0]["ProductID"]);
+                    p.ProductID = ds.Tables[0].Rows[0]["ProductID"].ToString();
                     p.ProductName = ds.Tables[0].Rows[0]["ProductName"].ToString();
                     p.UnitPrice = Decimal.Parse(ds.Tables[0].Rows[0]["UnitPrice"].ToString());
                     p.ShortDesc = ds.Tables[0].Rows[0]["ShortDesc"].ToString();
