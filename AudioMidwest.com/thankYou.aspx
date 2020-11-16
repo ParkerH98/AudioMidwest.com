@@ -95,11 +95,12 @@
 
             <hr />
 
+            <div class="row">
 
-            <div class="row mb-5 mt-3">
+                <div class="col-sm-12">
 
-                <div class="col-sm-4 offset-sm-6">
-                    <asp:Button ID="btnSubmit" runat="server" Text="Submit Order" class="btn btn-dark" OnClick="btnSubmit_Click"/>
+                    <asp:Label ID="lblOrderID" runat="server" Text=""></asp:Label>
+
                 </div>
 
             </div>

@@ -25,6 +25,12 @@ namespace AudioMidwest.com
                 loginDD.Visible = true;
                 CreateAcctDD.Visible = true;
             }
+
+            if (Session["OrderID"] != null)
+            {
+                lblOrderID.Text = Session["OrderID"].ToString();
+
+            }
         }
 
         protected void btnSignOut_Click(object sender, EventArgs e)

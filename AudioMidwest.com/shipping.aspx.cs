@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace AudioMidwest.com
 {
@@ -65,8 +68,71 @@ namespace AudioMidwest.com
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            Session["shopping"] = null;
-            Response.Redirect("~/thankYou.aspx");
+            User currentUser = (User)Session["currentUser"];
+
+            //creates db connection string
+            string strConnection = ConfigurationManager.ConnectionStrings["F20_ksphagueConnectionString"].ToString();
+
+            using (SqlConnection sqlConnection = new SqlConnection(strConnection))
+            {
+                
+
+                SqlCommand InsertCmd = new SqlCommand("spInsertMyOrder", sqlConnection);
+                InsertCmd.CommandType = CommandType.StoredProcedure;
+
+                //input variables for each attribute in user table
+                InsertCmd.Parameters.AddWithValue("@AccountNumber", currentUser.UserID);
+                InsertCmd.Parameters.AddWithValue("@CustomerFirstName", currentUser.FirstName);
+                InsertCmd.Parameters.AddWithValue("@CustomerLastName", currentUser.LastName);
+                InsertCmd.Parameters.AddWithValue("@ShippingAddress", currentUser.PrimaryAddress);
+                InsertCmd.Parameters.AddWithValue("@ShippingCity", currentUser.City);
+                InsertCmd.Parameters.AddWithValue("@ShippingState", currentUser.StateID);
+                InsertCmd.Parameters.AddWithValue("@ShippingZip", currentUser.Zipcode);
+
+                //create an output parameter to get an OH ID
+                SqlParameter OHIDOutput = new SqlParameter("@OrderNumber", SqlDbType.Int);
+                OHIDOutput.Direction = ParameterDirection.Output;
+                InsertCmd.Parameters.Add(OHIDOutput);
+
+
+                //call method to insert item from cart into database
+                InsertCmd.Parameters.Add("@OrderItems", SqlDbType.Structured).Value = GetCartItemData();
+
+                try
+                {
+                    sqlConnection.Open();
+                    InsertCmd.ExecuteNonQuery();
+
+                    Session["OrderID"] = OHIDOutput.Value.ToString();
+                    Session["shopping"] = null;
+                    Response.Redirect("~/thankYou.aspx");
+                }
+                catch (Exception ex)
+                {
+
+                    //show error message
+                    Console.WriteLine(ex.Message);
+                }
+
+            }
+        }
+
+        private DataTable GetCartItemData()
+        {
+            CartItemList cart = CartItemList.GetCart();
+
+            //instantiate our data table
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ProductID", typeof(int));
+            dt.Columns.Add("ProductQuantity", typeof(int));
+            dt.Columns.Add("UnitPrice", typeof(int));
+
+            //loop through cart and add each to table
+            for (int i = 0; i < cart.Count; i++)
+            {
+                dt.Rows.Add(cart[i].Product.ProductID, cart[i].Quantity, cart[i].Product.UnitPrice);
+            }
+            return dt;
         }
     }
 }
