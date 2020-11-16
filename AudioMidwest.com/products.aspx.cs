@@ -129,5 +129,145 @@ namespace AudioMidwest.com
                 return p;
             }
         }
+
+        protected void btnGoToCart_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/cart.aspx");
+        }
+
+        protected void btnSpeakerKicker_Click(object sender, EventArgs e)
+        {
+            Session["shopping"] = "true";
+            selectedProduct = GetSelectedProduct(Convert.ToInt32(hidSpeakerKicker.Value));
+
+            if (IsValid)
+            {
+                //get cart from session state
+                CartItemList shoppingCart = CartItemList.GetCart();
+                CartItem cartItem = shoppingCart[selectedProduct.ProductID];
+
+                //check if cart is empty & either increase quantity or add to cart
+                if (cartItem == null)
+                {
+                    //add to cart
+                    shoppingCart.AddItem(selectedProduct, Convert.ToInt32(tboxSpeakerKicker.Text));
+                }
+                else
+                {
+                    //product was already in the cart
+                    cartItem.AddQuantity(Convert.ToInt32(tboxSpeakerKicker.Text));
+                }
+            }
+
+            Response.Redirect("~/cart.aspx");
+        }
+
+        protected void btnSpeakerPhoenix_Click(object sender, EventArgs e)
+        {
+            Session["shopping"] = "true";
+            selectedProduct = GetSelectedProduct(Convert.ToInt32(hidSpeakerPhoenix.Value));
+
+            if (IsValid)
+            {
+                //get cart from session state
+                CartItemList shoppingCart = CartItemList.GetCart();
+                CartItem cartItem = shoppingCart[selectedProduct.ProductID];
+
+                //check if cart is empty & either increase quantity or add to cart
+                if (cartItem == null)
+                {
+                    //add to cart
+                    shoppingCart.AddItem(selectedProduct, Convert.ToInt32(tboxSpeakerPhoenix.Text));
+                }
+                else
+                {
+                    //product was already in the cart
+                    cartItem.AddQuantity(Convert.ToInt32(tboxSpeakerPhoenix.Text));
+                }
+            }
+
+            Response.Redirect("~/cart.aspx");
+        }
+
+        protected void btnAmpSound_Click(object sender, EventArgs e)
+        {
+            Session["shopping"] = "true";
+            selectedProduct = GetSelectedProduct(Convert.ToInt32(hidAmpSound.Value));
+
+            if (IsValid)
+            {
+                //get cart from session state
+                CartItemList shoppingCart = CartItemList.GetCart();
+                CartItem cartItem = shoppingCart[selectedProduct.ProductID];
+
+                //check if cart is empty & either increase quantity or add to cart
+                if (cartItem == null)
+                {
+                    //add to cart
+                    shoppingCart.AddItem(selectedProduct, Convert.ToInt32(tboxAmpSound.Text));
+                }
+                else
+                {
+                    //product was already in the cart
+                    cartItem.AddQuantity(Convert.ToInt32(tboxAmpSound.Text));
+                }
+            }
+
+            Response.Redirect("~/cart.aspx");
+        }
+
+        protected void btnAmpKicker_Click(object sender, EventArgs e)
+        {
+            Session["shopping"] = "true";
+            selectedProduct = GetSelectedProduct(Convert.ToInt32(hidAmpKicker.Value));
+
+            if (IsValid)
+            {
+                //get cart from session state
+                CartItemList shoppingCart = CartItemList.GetCart();
+                CartItem cartItem = shoppingCart[selectedProduct.ProductID];
+
+                //check if cart is empty & either increase quantity or add to cart
+                if (cartItem == null)
+                {
+                    //add to cart
+                    shoppingCart.AddItem(selectedProduct, Convert.ToInt32(tboxAmpKicker.Text));
+                }
+                else
+                {
+                    //product was already in the cart
+                    cartItem.AddQuantity(Convert.ToInt32(tboxAmpKicker.Text));
+                }
+            }
+
+            Response.Redirect("~/cart.aspx");
+        }
+
+        protected void btnAmpPhoenix_Click(object sender, EventArgs e)
+        {
+            Session["shopping"] = "true";
+            selectedProduct = GetSelectedProduct(Convert.ToInt32(hidAmpPhoenix.Value));
+
+            if (IsValid)
+            {
+                //get cart from session state
+                CartItemList shoppingCart = CartItemList.GetCart();
+                CartItem cartItem = shoppingCart[selectedProduct.ProductID];
+
+                //check if cart is empty & either increase quantity or add to cart
+                if (cartItem == null)
+                {
+                    //add to cart
+                    shoppingCart.AddItem(selectedProduct, Convert.ToInt32(tboxAmpPhoenix.Text));
+                }
+                else
+                {
+                    //product was already in the cart
+                    cartItem.AddQuantity(Convert.ToInt32(tboxAmpPhoenix.Text));
+                }
+            }
+
+            Response.Redirect("~/cart.aspx");
+        }
     }
 }

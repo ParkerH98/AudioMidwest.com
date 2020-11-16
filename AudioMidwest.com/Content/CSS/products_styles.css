@@ -6,16 +6,18 @@
     bottom: 0;
 }
 
-.height{
-    
-    height : 35rem;
+.middle {
+    position: absolute;
+    top: 40%;
 }
 
+.height{
+    min-height : 50rem;
+}
 /*END NEEDED FOR THIS PAGE*/
 
 
 /*NEEDED FOR ALL PAGES*/
-
 html, body {
     /* disallows horizontal scrolling*/
     max-width: 100%;
