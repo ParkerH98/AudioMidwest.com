@@ -95,7 +95,7 @@ namespace AudioMidwest.com
 
                 //parameters for sp
 
-                SqlParameter ProductIdInput = new SqlParameter("@ProductID", hidSpeakerFocal.Value);
+                SqlParameter ProductIdInput = new SqlParameter("@ProductID", productID);
                 ProductIdInput.Direction = ParameterDirection.Input;
                 ProductIdInput.DbType = DbType.Int32;
                 sqlDA.SelectCommand.Parameters.Add(ProductIdInput);

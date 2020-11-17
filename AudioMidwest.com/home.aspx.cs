@@ -12,6 +12,19 @@ namespace AudioMidwest.com
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            User currentUser = (User)Session["currentUser"];
+
+            if (Session["visited"] != null)
+            {
+                lblTxt.Text = "Welcome " + currentUser.FirstName;
+                Session["visited"] = null;
+            }
+            else
+            {
+                lblTxt.Text = "";
+            }
+
+
             if (Session["currentUser"] != null)
             {
                 btnSignOut.Visible = true;

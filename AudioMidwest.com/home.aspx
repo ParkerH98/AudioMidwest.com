@@ -88,6 +88,8 @@
 
                 <div class="col-sm-12 ml-3">
 
+                    <asp:Label ID="lblTxt" runat="server" Text=""></asp:Label>
+
                     <h1>Welcome to Audio Midwest</h1>
                     <h2>Sellers and Installers of Premium AV Equipment</h2>
 

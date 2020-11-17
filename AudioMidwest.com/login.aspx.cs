@@ -100,11 +100,18 @@ namespace AudioMidwest.com
 
                     // if logged in go to shipping
                     // else go to home like normal
+
                     Session["loggedIn"] = "true";
-                    if (Session["shopping"].ToString() == "true")
-                    {
-                        Response.Redirect("~/shipping.aspx");
+                    Session["visited"] = "false";
+
+                    if (Session["shopping"] != null) {
+
+                        if (Session["shopping"].ToString() == "true")
+                        {
+                            Response.Redirect("~/shipping.aspx");
+                        }
                     }
+                    
                     else
                     {
                         Response.Redirect("~/home.aspx");
@@ -136,6 +143,11 @@ namespace AudioMidwest.com
             Session["currentUser"] = null;
 
             Response.Redirect("~/login.aspx");
+        }
+
+        protected void btnCreateAccoount_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/accountCreation.aspx");
         }
     }
 }
