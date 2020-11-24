@@ -12,7 +12,7 @@ namespace AudioMidwest.com
         protected void Page_Load(object sender, EventArgs e)
         {
             //if user is signed in, hide/display various navigation links in navbar and footer
-            if (Session["currentUser"] != null)
+            if (Request.Cookies["FirstName"] != null)
             {
                 btnSignOut.Visible = true;
                 modifyAcctDD.Visible = true;
@@ -41,19 +41,53 @@ namespace AudioMidwest.com
         {
             Session["SignOutMsg"] = "You have been successfully signed out.";
 
-            User currentUser = (User)Session["currentUser"];
-            currentUser.FirstName = null;
-            currentUser.LastName = null;
-            currentUser.PrimaryAddress = null;
-            currentUser.SecondaryAddress = null;
-            currentUser.City = null;
-            currentUser.StateID = 1;
-            currentUser.Zipcode = null;
-            currentUser.PhoneNumber = null;
-            currentUser.Username = null;
-            currentUser.UserPassword = null;
-            currentUser.RecoveryEmail = null;
-            Session["currentUser"] = null;
+            HttpCookie cookieCurrentUser = new HttpCookie("currentUser");
+            cookieCurrentUser.Expires = DateTime.Now.AddHours(-1);
+            Response.Cookies.Add(cookieCurrentUser);
+
+            HttpCookie cookieCurrentUserFirstName = new HttpCookie("FirstName");
+            cookieCurrentUserFirstName.Expires = DateTime.Now.AddHours(-1);
+            Response.Cookies.Add(cookieCurrentUserFirstName);
+
+            HttpCookie cookieCurrentUserLastName = new HttpCookie("LastName");
+            cookieCurrentUserLastName.Expires = DateTime.Now.AddHours(-1);
+            Response.Cookies.Add(cookieCurrentUserLastName);
+
+            HttpCookie cookieCurrentUserPrimaryAddress = new HttpCookie("PrimaryAddress");
+            cookieCurrentUserPrimaryAddress.Expires = DateTime.Now.AddHours(-1);
+            Response.Cookies.Add(cookieCurrentUserPrimaryAddress);
+
+            HttpCookie cookieCurrentUserSecondaryAddress = new HttpCookie("SecondaryAddress");
+            cookieCurrentUserSecondaryAddress.Expires = DateTime.Now.AddHours(-1);
+            Response.Cookies.Add(cookieCurrentUserSecondaryAddress);
+
+            HttpCookie cookieCurrentUserCity = new HttpCookie("City");
+            cookieCurrentUserCity.Expires = DateTime.Now.AddHours(-1);
+            Response.Cookies.Add(cookieCurrentUserCity);
+
+            HttpCookie cookieCurrentUserStateID = new HttpCookie("StateID");
+            cookieCurrentUserStateID.Expires = DateTime.Now.AddHours(-1);
+            Response.Cookies.Add(cookieCurrentUserStateID);
+
+            HttpCookie cookieCurrentUserZip = new HttpCookie("Zip");
+            cookieCurrentUserZip.Expires = DateTime.Now.AddHours(-1);
+            Response.Cookies.Add(cookieCurrentUserZip);
+
+            HttpCookie cookieCurrentUserPhoneNumber = new HttpCookie("PhoneNumber");
+            cookieCurrentUserPhoneNumber.Expires = DateTime.Now.AddHours(-1);
+            Response.Cookies.Add(cookieCurrentUserPhoneNumber);
+
+            HttpCookie cookieCurrentUserEmail = new HttpCookie("Email");
+            cookieCurrentUserEmail.Expires = DateTime.Now.AddHours(-1);
+            Response.Cookies.Add(cookieCurrentUserEmail);
+
+            HttpCookie cookieCurrentUserRecoveryEmail = new HttpCookie("RecoveryEmail");
+            cookieCurrentUserRecoveryEmail.Expires = DateTime.Now.AddHours(-1);
+            Response.Cookies.Add(cookieCurrentUserRecoveryEmail);
+
+            HttpCookie cookieCurrentUserPassword = new HttpCookie("UserPassword");
+            cookieCurrentUserPassword.Expires = DateTime.Now.AddHours(-1);
+            Response.Cookies.Add(cookieCurrentUserPassword);
 
             Response.Redirect("~/login.aspx");
         }

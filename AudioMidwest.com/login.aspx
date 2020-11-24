@@ -150,25 +150,10 @@
 
                     <div class="col-sm-12 text-center text-muted font-weight-bold mt-3 mb-5">
 
-
                         <asp:Label ID="lblMessage" runat="server" Text="" class="col-form-label-sm"></asp:Label>
 
                     </div>
-
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
         <%-- end of main container div --%>
 

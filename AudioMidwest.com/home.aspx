@@ -132,6 +132,83 @@
                     </p>
                 </div>
             </div>
+
+            <%-- carousel row --%>
+            <div class="row mb-3">
+
+                <div class="col-sm-4 offset-sm-4">
+
+                    <div id="carouselIndicators" class="carousel slide"  data-ride="carousel" data-interval="2500"
+                            pause="hover">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="4"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="5"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="6"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="7"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="8"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="9"></li>
+
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Content/Images/logo_denon.jpg" class="d-block w-100 img-fluid mx-auto rounded"
+                                    alt="Denon brand logo" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Content/Images/logo_focal.jpg" class="d-block w-100 img-fluid mx-auto rounded"
+                                    alt="Focal brand logo" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Content/Images/logo_kenwood.jpg"
+                                    class="d-block w-100 img-fluid mx-auto rounded" alt="Kenwood brand logo" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Content/Images/logo_kicker.jpg"
+                                    class="d-block w-100 img-fluid mx-auto rounded" alt="Kicker brand logo" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Content/Images/logo_lg.jpg" class="d-block w-100 img-fluid mx-auto rounded"
+                                    alt="LG brand logo" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Content/Images/logo_pioneer.jpg"
+                                    class="d-block w-100 img-fluid mx-auto rounded" alt="Pioneer brand logo" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Content/Images/logo_samsung.jpg"
+                                    class="d-block w-100 img-fluid mx-auto rounded" alt="Samsung brand logo" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Content/Images/logo_sony.jpg" class="d-block w-100 img-fluid mx-auto rounded"
+                                    alt="Sony brand logo" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Content/Images/logo_sound.jpg" class="d-block w-100 img-fluid mx-auto rounded"
+                                    alt="sound Digital brand logo" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Content/Images/logo_yamaha.jpg"
+                                    class="d-block w-100 img-fluid mx-auto rounded" alt="Yamaha brand logo" />
+                            </div>
+
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
         <%-- end of main container div --%>
 

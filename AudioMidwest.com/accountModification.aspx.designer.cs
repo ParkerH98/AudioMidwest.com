@@ -303,6 +303,15 @@ namespace AudioMidwest.com
         protected global::System.Web.UI.WebControls.Button btnUpdateAcct;
 
         /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
+
+        /// <summary>
         /// footerLogin control.
         /// </summary>
         /// <remarks>

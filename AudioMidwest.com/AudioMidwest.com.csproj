@@ -92,6 +92,16 @@
     <Content Include="Content\Images\amp_kicker.jpg" />
     <Content Include="Content\Images\amp_phoenix.jpg" />
     <Content Include="Content\Images\amp_sound.jpg" />
+    <Content Include="Content\Images\logo_denon.jpg" />
+    <Content Include="Content\Images\logo_focal.jpg" />
+    <Content Include="Content\Images\logo_kenwood.jpg" />
+    <Content Include="Content\Images\logo_kicker.jpg" />
+    <Content Include="Content\Images\logo_lg.jpg" />
+    <Content Include="Content\Images\logo_pioneer.jpg" />
+    <Content Include="Content\Images\logo_samsung.jpg" />
+    <Content Include="Content\Images\logo_sony.jpg" />
+    <Content Include="Content\Images\logo_sound.jpg" />
+    <Content Include="Content\Images\logo_yamaha.jpg" />
     <Content Include="Content\Images\speaker_focal.jpg" />
     <Content Include="Content\Images\speaker_kicker.jpg" />
     <Content Include="Content\Images\speaker_phoenix.jpg" />

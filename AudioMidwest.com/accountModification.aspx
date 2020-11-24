@@ -437,8 +437,15 @@
             <div class="row mb-5 mt-3">
 
                 <div class="col-sm-4 offset-sm-6">
-                    <asp:Button ID="btnUpdateAcct" runat="server" Text="Update Account" class="btn btn-dark" OnClick="btnUpdateAcct_Click"
-                        />
+                    <asp:Button ID="btnUpdateAcct" runat="server" Text="Update Account" class="btn btn-dark" OnClick="btnUpdateAcct_Click"/>
+                </div>
+
+            </div>
+
+             <div class="row mb-5 mt-3">
+
+                <div class="col-sm-12 text-center text-muted font-weight-bold">
+                    <asp:Label ID="lblMessage" runat="server" Text="Your Account has been successfully updated."></asp:Label>
                 </div>
 
             </div>
@@ -447,7 +454,7 @@
         <%-- end of main container div --%>
 
         <%-- footer container --%>
-        <div class="container-fluid px-0">
+        <div class="cont<textarea id=" textarea1="">
 
             <footer class="bg-dark">
 

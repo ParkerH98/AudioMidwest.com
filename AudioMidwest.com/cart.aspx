@@ -114,6 +114,8 @@
 
                     <asp:Button ID="btnRemove" CssClass="btn btn-dark mb-2 d-block" runat="server" Text="Remove Item" OnClick="btnRemove_Click" />
                     <asp:Button ID="btnEmpty" CssClass="btn btn-dark d-block mb-2" runat="server" Text="Empty Cart" OnClick="btnEmpty_Click" />
+
+                    <asp:Label ID="lblMessage" runat="server" Text="Unable to remove item because the cart is empty." Visible="False" ForeColor="Red"></asp:Label>
                 </div>
 
             </div>
