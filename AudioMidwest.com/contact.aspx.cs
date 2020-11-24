@@ -34,6 +34,16 @@ namespace AudioMidwest.com
                 footerAccountmodification.Visible = false;
                 footerSignout.Visible = false;
             }
+
+
+            if (Request.Cookies["FirstName"] != null)
+            {
+                tboxFirstName.Text = Request.Cookies["FirstName"].Value;
+                tboxLastName.Text = Request.Cookies["LastName"].Value.ToString();
+                tboxEmail.Text = Request.Cookies["Email"].Value.ToString();
+                tboxPhoneNumber.Text = Request.Cookies["PhoneNumber"].Value.ToString();
+
+            }
         }
 
         protected void btnSignOut_Click(object sender, EventArgs e)

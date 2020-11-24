@@ -96,8 +96,8 @@
 
                 <div class="col-sm-12 ml-3">
 
-                    <h1>Create Account</h1>
-                    <%--<h2>Sellers and Installers of Premium AV Equipment</h2>--%>
+                    <h1>Questions, Comments, or Concerns?</h1>
+                    <h2>Leave a Message Below and We'll Be Happy to Reply</h2>
 
                 </div>
             </div>
