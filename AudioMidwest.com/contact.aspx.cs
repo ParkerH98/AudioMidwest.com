@@ -42,7 +42,6 @@ namespace AudioMidwest.com
                 tboxLastName.Text = Request.Cookies["LastName"].Value.ToString();
                 tboxEmail.Text = Request.Cookies["Email"].Value.ToString();
                 tboxPhoneNumber.Text = Request.Cookies["PhoneNumber"].Value.ToString();
-
             }
         }
 

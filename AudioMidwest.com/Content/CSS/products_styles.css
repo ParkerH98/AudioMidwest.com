@@ -30,6 +30,7 @@
 
 
 /*NEEDED FOR ALL PAGES*/
+
 html, body {
     /* disallows horizontal scrolling*/
     max-width: 100%;
@@ -80,4 +81,3 @@ footer a:hover {
     list-style-position: inside;
 }
 /*END NEEDED FOR ALL PAGES*/
-

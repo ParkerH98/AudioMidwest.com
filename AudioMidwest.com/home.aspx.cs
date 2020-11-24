@@ -17,7 +17,7 @@ namespace AudioMidwest.com
             if (Session["visited"] != null && Session["currentUser"] != null)
             {
                 User currentUser = (User)Session["currentUser"];
-                lblTxt.Text = "Hello " + currentUser.FirstName;
+                lblTxt.Text = "You successfully logged in " + currentUser.FirstName;
                 Session["visited"] = null;
             }
             else

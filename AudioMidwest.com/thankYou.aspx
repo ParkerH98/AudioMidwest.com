@@ -118,7 +118,7 @@
         <%-- end of main container div --%>
 
         <%-- footer container --%>
-        <div class="container-fluid px-0">
+        <div class="container-fluid px-0 bottom">
 
             <footer class="bg-dark">
 

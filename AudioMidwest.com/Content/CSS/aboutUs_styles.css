@@ -28,6 +28,12 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
+/*puts footer at very bottom of page*/
+.bottom {
+    position: absolute;
+    bottom: 0;
+}
+
 h1 {
     font-size: 5rem;
 }
@@ -71,4 +77,3 @@ footer a:hover {
     list-style-position: inside;
 }
 /*END NEEDED FOR ALL PAGES*/
-
