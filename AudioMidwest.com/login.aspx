@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
 
     <title>Login</title>
@@ -15,13 +16,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <%-- google fonts --%>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet" />
 
     <%-- main style sheet --%>
     <link href="Content/CSS/home_styles.css" rel="stylesheet" />
 
 </head>
+
 <body>
     <form id="form1" runat="server">
 
@@ -67,10 +71,15 @@
                                 Account
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx" runat="server">Login</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD" NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD" NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
-                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click" NavigateUrl="login.aspx" />
+                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx"
+                                    runat="server">Login</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD"
+                                    NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD"
+                                    NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
+                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out"
+                                    CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click"
+                                    NavigateUrl="login.aspx" />
                             </div>
                         </li>
                     </ul>
@@ -97,67 +106,69 @@
 
             <div class="row space">
 
-                    <div class="col-sm-3 text-right">
-                        <label class="col-form-label">User Name</label>
-                    </div>
+                <div class="col-sm-3 text-right">
+                    <label class="col-form-label">User Name</label>
+                </div>
 
-                    <div class="col-sm-6">
-                        <asp:TextBox ID="tboxUserName" class="form-control" runat="server"
-                            ControlToValidate="tboxUserName"></asp:TextBox>
-                        <small>
-                            <asp:RequiredFieldValidator ID="rfvUserName" runat="server"
-                                ErrorMessage="Please enter your user name." ControlToValidate="tboxUserName"
-                                ForeColor="Red"></asp:RequiredFieldValidator>
-                        </small>
-                    </div>
+                <div class="col-sm-6">
+                    <asp:TextBox ID="tboxUserName" class="form-control" runat="server" ControlToValidate="tboxUserName">
+                    </asp:TextBox>
+                    <small>
+                        <asp:RequiredFieldValidator ID="rfvUserName" runat="server"
+                            ErrorMessage="Please enter your user name." ControlToValidate="tboxUserName"
+                            ForeColor="Red"></asp:RequiredFieldValidator>
+                    </small>
+                </div>
+
+            </div>
+
+            <div class="row space">
+
+                <div class="col-sm-3 text-right">
+                    <label class="col-form-label">Password</label>
+                </div>
+
+                <div class="col-sm-6">
+                    <asp:TextBox ID="tboxPassword" class="form-control" TextMode="Password" runat="server">
+                    </asp:TextBox>
+
+                    <small>
+                        <asp:RequiredFieldValidator ID="rfvPassword" runat="server"
+                            ErrorMessage="Please enter a valid password." ControlToValidate="tboxPassword"
+                            ForeColor="Red"></asp:RequiredFieldValidator>
+                    </small>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-6 text-right">
+
+
 
                 </div>
 
-                <div class="row space">
+                <div class="col-sm-6 offset-sm-6">
+                    <asp:Button ID="btnLogin" runat="server" class="btn btn-primary" Text="Login"
+                        OnClick="btnLogin_Click" />
+                    <asp:Button ID="btnCreateAccoount" runat="server" class="btn btn-secondary" Text="Create Account"
+                        CausesValidation="False" OnClick="btnCreateAccoount_Click" />
+                </div>
+            </div>
 
-                    <div class="col-sm-3 text-right">
-                        <label class="col-form-label">Password</label>
-                    </div>
+            <div class="row">
 
-                    <div class="col-sm-6">
-                        <asp:TextBox ID="tboxPassword" class="form-control" TextMode="Password" runat="server"></asp:TextBox>
+                <div class="col-sm-12 text-center text-muted font-weight-bold mt-3 mb-5">
 
-                        <small>
-                            <asp:RequiredFieldValidator ID="rfvPassword" runat="server"
-                                ErrorMessage="Please enter a valid password." ControlToValidate="tboxPassword"
-                                ForeColor="Red"></asp:RequiredFieldValidator>
-                        </small>
-                    </div>
+                    <asp:Label ID="lblMessage" runat="server" Text="" class="col-form-label-sm"></asp:Label>
 
                 </div>
-
-                <div class="row">
-
-                    <div class="col-sm-6 text-right">
-
-                        
-
-                    </div>
-
-                    <div class="col-sm-6 offset-sm-6">
-                        <asp:Button ID="btnLogin" runat="server" class="btn btn-primary" Text="Login" OnClick="btnLogin_Click"/>
-                        <asp:Button ID="btnCreateAccoount" runat="server" class="btn btn-secondary"
-                            Text="Create Account" CausesValidation="False" OnClick="btnCreateAccoount_Click" />
-                    </div>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-sm-12 text-center text-muted font-weight-bold mt-3 mb-5">
-
-                        <asp:Label ID="lblMessage" runat="server" Text="" class="col-form-label-sm"></asp:Label>
-
-                    </div>
-                </div>
+            </div>
         </div>
         <%-- end of main container div --%>
 
-       <%-- footer container --%>
+        <%-- footer container --%>
         <div class="container-fluid px-0">
 
             <footer class="bg-dark">
@@ -264,4 +275,5 @@
         </div>
     </form>
 </body>
+
 </html>

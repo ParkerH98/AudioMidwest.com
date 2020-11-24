@@ -134,7 +134,7 @@
         </div>
         <%-- end of main container div --%>
 
-       <%-- footer container --%>
+        <%-- footer container --%>
         <div class="container-fluid px-0">
 
             <footer class="bg-dark">

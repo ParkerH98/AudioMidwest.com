@@ -93,7 +93,9 @@
 
             <div class="row mt-3">
                 <div class="col-sm-12">
-                    <asp:Button ID="btnGoToCart" CssClass="btn btn-secondary float-right" runat="server" Text="Go to Cart" OnClick="btnGoToCart_Click" CausesValidation="False" /></div>
+                    <asp:Button ID="btnGoToCart" CssClass="btn btn-secondary float-right" runat="server"
+                        Text="Go to Cart" OnClick="btnGoToCart_Click" CausesValidation="False" />
+                </div>
             </div>
 
             <%-- page heading row --%>
@@ -142,7 +144,8 @@
                             <div class="row ml-1 mb-3 mt-1">
                                 <div class="col-sm-6">
                                     <asp:Button ID="btnSpeakerFocal" CssClass="btn btn-primary" runat="server"
-                                        Text="Add to Cart" ValidationGroup="SpeakerFocal" OnClick="btnSpeakerFocal_Click" />
+                                        Text="Add to Cart" ValidationGroup="SpeakerFocal"
+                                        OnClick="btnSpeakerFocal_Click" />
                                 </div>
 
                                 <div class="col-sm-6">
@@ -189,7 +192,8 @@
                             <div class="row ml-1 mb-3 mt-1">
                                 <div class="col-sm-6">
                                     <asp:Button ID="btnSpeakerKicker" CssClass="btn btn-primary" runat="server"
-                                        Text="Add to Cart" ValidationGroup="SpeakerKicker" OnClick="btnSpeakerKicker_Click" />
+                                        Text="Add to Cart" ValidationGroup="SpeakerKicker"
+                                        OnClick="btnSpeakerKicker_Click" />
                                 </div>
 
                                 <div class="col-sm-6">
@@ -234,7 +238,8 @@
                             <div class="row ml-1 mb-3 mt-1">
                                 <div class="col-sm-6">
                                     <asp:Button ID="btnSpeakerPhoenix" CssClass="btn btn-primary" runat="server"
-                                        Text="Add to Cart" ValidationGroup="SpeakerPhoenix" OnClick="btnSpeakerPhoenix_Click" />
+                                        Text="Add to Cart" ValidationGroup="SpeakerPhoenix"
+                                        OnClick="btnSpeakerPhoenix_Click" />
                                 </div>
 
                                 <div class="col-sm-6">
@@ -263,7 +268,9 @@
                             src="Content/Images/amp_sound.jpg" alt="Card image cap" />
                         <div class="card-body middle">
                             <h5 class="card-title">Sound Digital 800.1 EVO</h5>
-                            <p class="card-text">The EVO X Line brings the latest technology in a compact design with the highest quality components. From a pioneering technology, SounDigital brought to car audio amplifiers something that had not been explored yet.</p>
+                            <p class="card-text">The EVO X Line brings the latest technology in a compact design with
+                                the highest quality components. From a pioneering technology, SounDigital brought to car
+                                audio amplifiers something that had not been explored yet.</p>
                             <p class="card-text"><small class="text-muted">$399.99</small></p>
                         </div>
 
@@ -306,7 +313,9 @@
                             src="Content/Images/amp_kicker.jpg" alt="Card image cap" />
                         <div class="card-body middle">
                             <h5 class="card-title">Kicker KXA 400.4 Amplifier</h5>
-                            <p class="card-text">This KX 400-watt four channel amplifier is built to easily power your door speakers or be a full system solution. FIT2™ (Fail-Safe Integration Technology) ensures your amp works with nearly any stock or aftermarket radio.</p>
+                            <p class="card-text">This KX 400-watt four channel amplifier is built to easily power your
+                                door speakers or be a full system solution. FIT2™ (Fail-Safe Integration Technology)
+                                ensures your amp works with nearly any stock or aftermarket radio.</p>
                             <p class="card-text"><small class="text-muted">$329.95</small></p>
                         </div>
 
@@ -349,7 +358,12 @@
                             src="Content/Images/amp_phoenix.jpg" alt="Card image cap" />
                         <div class="card-body middle">
                             <h5 class="card-title">Phoenix Gold GX 1200W 6-Channel Full Range Class D Amplifier</h5>
-                            <p class="card-text">Designed to cover a multitude of installation needs, GX is packed with the features and power you can expect from the Phoenix Gold brand. Included in the line are our proprietary PG quick connects for high current capability and reliability while delivering uber clean and quick installations. The chassis has been optimized by utilizing BFD (Balanced Flow Dissipation) to keep the amplifier running cool when the music is hot.</p>
+                            <p class="card-text">Designed to cover a multitude of installation needs, GX is packed with
+                                the features and power you can expect from the Phoenix Gold brand. Included in the line
+                                are our proprietary PG quick connects for high current capability and reliability while
+                                delivering uber clean and quick installations. The chassis has been optimized by
+                                utilizing BFD (Balanced Flow Dissipation) to keep the amplifier running cool when the
+                                music is hot.</p>
                             <p class="card-text"><small class="text-muted">$579.99</small></p>
                         </div>
 

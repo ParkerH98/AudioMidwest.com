@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
 
     <title>Shipping Information</title>
@@ -15,13 +16,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <%-- google fonts --%>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet" />
 
     <%-- main style sheet --%>
     <link href="Content/CSS/home_styles.css" rel="stylesheet" />
 
 </head>
+
 <body>
     <form id="form1" runat="server">
 
@@ -67,10 +71,15 @@
                                 Account
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx" runat="server">Login</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD" NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD" NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
-                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click" NavigateUrl="login.aspx" />
+                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx"
+                                    runat="server">Login</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD"
+                                    NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD"
+                                    NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
+                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out"
+                                    CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click"
+                                    NavigateUrl="login.aspx" />
                             </div>
                         </li>
                     </ul>
@@ -95,7 +104,7 @@
 
             <hr />
 
-             <%-- first name row --%>
+            <%-- first name row --%>
             <div class="row mb-2">
 
                 <%-- label column --%>
@@ -140,8 +149,8 @@
 
                     <small>
                         <asp:RequiredFieldValidator ID="rfvLastName" runat="server"
-                            ErrorMessage="Please enter your last name." ControlToValidate="tboxLastName"
-                            ForeColor="Red" Display="Dynamic">
+                            ErrorMessage="Please enter your last name." ControlToValidate="tboxLastName" ForeColor="Red"
+                            Display="Dynamic">
                         </asp:RequiredFieldValidator>
                     </small>
 
@@ -155,23 +164,23 @@
 
 
 
-            
 
 
 
-          
 
 
 
-            
 
 
 
-            
 
 
 
-            
+
+
+
+
+
 
 
 
@@ -262,10 +271,13 @@
                 <%-- user input column --%>
                 <div class="col-sm-4">
 
-                    <asp:DropDownList ID="ddlStates" runat="server" DataSourceID="sdsStates" DataTextField="StateName" DataValueField="StateID">
+                    <asp:DropDownList ID="ddlStates" runat="server" DataSourceID="sdsStates" DataTextField="StateName"
+                        DataValueField="StateID">
                     </asp:DropDownList>
 
-                    <asp:SqlDataSource ID="sdsStates" runat="server" ConnectionString="<%$ ConnectionStrings:F20_ksphagueConnectionString %>" SelectCommand="spSelectAllStates" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="sdsStates" runat="server"
+                        ConnectionString="<%$ ConnectionStrings:F20_ksphagueConnectionString %>"
+                        SelectCommand="spSelectAllStates" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
 
                     <small>
                         <asp:RequiredFieldValidator ID="rfvStates" runat="server" ErrorMessage="Please select a state."
@@ -322,7 +334,8 @@
             <div class="row mb-5 mt-3">
 
                 <div class="col-sm-4 offset-sm-6">
-                    <asp:Button ID="btnSubmit" runat="server" Text="Submit Order" class="btn btn-dark" OnClick="btnSubmit_Click"/>
+                    <asp:Button ID="btnSubmit" runat="server" Text="Submit Order" class="btn btn-dark"
+                        OnClick="btnSubmit_Click" />
                 </div>
 
             </div>
@@ -438,4 +451,5 @@
     </form>
 </body>
 <script src="Scripts/format.js"></script>
+
 </html>

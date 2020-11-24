@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
 
     <title>Modify Account</title>
@@ -15,13 +16,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <%-- google fonts --%>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet" />
 
     <%-- main style sheet --%>
     <link href="Content/CSS/home_styles.css" rel="stylesheet" />
 
 </head>
+
 <body>
     <form id="form1" runat="server">
 
@@ -67,10 +71,15 @@
                                 Account
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx" runat="server">Login</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD" NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD" NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
-                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click" NavigateUrl="login.aspx" CausesValidation="False" />
+                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx"
+                                    runat="server">Login</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD"
+                                    NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD"
+                                    NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
+                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out"
+                                    CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click"
+                                    NavigateUrl="login.aspx" CausesValidation="False" />
                             </div>
                         </li>
                     </ul>
@@ -118,7 +127,7 @@
 
                 </div>
 
-     
+
                 <div class="col-sm-4 pt-2">
                 </div>
 
@@ -141,8 +150,8 @@
 
                     <small>
                         <asp:RequiredFieldValidator ID="rfvLastName" runat="server"
-                            ErrorMessage="Please enter your last name." ControlToValidate="tboxLastName"
-                            ForeColor="Red" Display="Dynamic">
+                            ErrorMessage="Please enter your last name." ControlToValidate="tboxLastName" ForeColor="Red"
+                            Display="Dynamic">
                         </asp:RequiredFieldValidator>
                     </small>
 
@@ -166,7 +175,7 @@
                 <%-- user input column --%>
                 <div class="col-sm-4">
 
-                        <asp:TextBox ID="tboxEmail" class="form-control" runat="server" ReadOnly="True"></asp:TextBox>
+                    <asp:TextBox ID="tboxEmail" class="form-control" runat="server" ReadOnly="True"></asp:TextBox>
 
                     <small>
 
@@ -358,7 +367,8 @@
 
                     <small>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
-                            ErrorMessage="Please enter a city." ControlToValidate="tboxCity" ForeColor="Red" Display="Dynamic">
+                            ErrorMessage="Please enter a city." ControlToValidate="tboxCity" ForeColor="Red"
+                            Display="Dynamic">
                         </asp:RequiredFieldValidator>
                     </small>
 
@@ -382,10 +392,13 @@
                 <%-- user input column --%>
                 <div class="col-sm-4">
 
-                    <asp:DropDownList ID="ddlStates" runat="server" DataSourceID="sdsStates" DataTextField="StateName" DataValueField="StateID">
+                    <asp:DropDownList ID="ddlStates" runat="server" DataSourceID="sdsStates" DataTextField="StateName"
+                        DataValueField="StateID">
                     </asp:DropDownList>
 
-                    <asp:SqlDataSource ID="sdsStates" runat="server" ConnectionString="<%$ ConnectionStrings:F20_ksphagueConnectionString %>" SelectCommand="spSelectAllStates" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="sdsStates" runat="server"
+                        ConnectionString="<%$ ConnectionStrings:F20_ksphagueConnectionString %>"
+                        SelectCommand="spSelectAllStates" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
 
                     <small>
                         <asp:RequiredFieldValidator ID="rfvStates" runat="server" ErrorMessage="Please select a state."
@@ -437,15 +450,17 @@
             <div class="row mb-5 mt-3">
 
                 <div class="col-sm-4 offset-sm-6">
-                    <asp:Button ID="btnUpdateAcct" runat="server" Text="Update Account" class="btn btn-dark" OnClick="btnUpdateAcct_Click"/>
+                    <asp:Button ID="btnUpdateAcct" runat="server" Text="Update Account" class="btn btn-dark"
+                        OnClick="btnUpdateAcct_Click" />
                 </div>
 
             </div>
 
-             <div class="row mb-5 mt-3">
+            <div class="row mb-5 mt-3">
 
                 <div class="col-sm-12 text-center text-muted font-weight-bold">
-                    <asp:Label ID="lblMessage" runat="server" Text="Your Account has been successfully updated."></asp:Label>
+                    <asp:Label ID="lblMessage" runat="server" Text="Your Account has been successfully updated.">
+                    </asp:Label>
                 </div>
 
             </div>
