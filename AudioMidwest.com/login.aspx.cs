@@ -113,10 +113,10 @@ namespace AudioMidwest.com
 
                     Session["currentUser"] = currentUser;
 
-                    HttpCookie cookieCurrentUser = new HttpCookie("currentUser");
-                    cookieCurrentUser.Value = currentUser.UserID.ToString();
-                    cookieCurrentUser.Expires = DateTime.Now.AddHours(1);
-                    Response.Cookies.Add(cookieCurrentUser);
+                    HttpCookie cookieCurrentUserID = new HttpCookie("UserID");
+                    cookieCurrentUserID.Value = currentUser.UserID.ToString();
+                    cookieCurrentUserID.Expires = DateTime.Now.AddHours(1);
+                    Response.Cookies.Add(cookieCurrentUserID);
 
                     HttpCookie cookieCurrentUserFirstName = new HttpCookie("FirstName");
                     cookieCurrentUserFirstName.Value = currentUser.FirstName;

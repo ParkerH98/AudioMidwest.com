@@ -145,7 +145,7 @@ namespace AudioMidwest.com
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
 
-            if (Session["currentUser"] != null)
+            if (Request.Cookies["FirstName"] != null)
             {
                 Response.Redirect("~/shipping.aspx");
             }

@@ -41,7 +41,7 @@ namespace AudioMidwest.com
 
             if (Session["OrderID"] != null)
             {
-                lblOrderID.Text = "Thank you for your puchase " + currentUser.FirstName + ". Your order number is " + orderNum + ".";
+                lblOrderID.Text = "Thank you for your puchase " + Request.Cookies["FirstName"].Value + ". Your order number is " + orderNum + ".";
             }
         }
 

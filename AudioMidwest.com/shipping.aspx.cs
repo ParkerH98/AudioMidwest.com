@@ -38,19 +38,15 @@ namespace AudioMidwest.com
                 footerSignout.Visible = false;
             }
 
-            if (!IsPostBack)
+            if (Request.Cookies["FirstName"] != null)
             {
-                if (Session["currentUser"] != null)
-                {
-                    User currentUser = (User)Session["currentUser"];
-                    tboxFirstName.Text = currentUser.FirstName;
-                    tboxLastName.Text = currentUser.LastName;
-                    tboxPrimaryAddress.Text = currentUser.PrimaryAddress;
-                    tboxSecondaryAddress.Text = currentUser.SecondaryAddress;
-                    tboxCity.Text = currentUser.City;
-                    ddlStates.SelectedValue = currentUser.StateID.ToString();
-                    tboxZip.Text = currentUser.Zipcode;
-                }
+                tboxFirstName.Text = Request.Cookies["FirstName"].Value;
+                tboxLastName.Text = Request.Cookies["LastName"].Value.ToString();
+                tboxPrimaryAddress.Text = Request.Cookies["PrimaryAddress"].Value.ToString();
+                tboxSecondaryAddress.Text = Request.Cookies["SecondaryAddress"].Value.ToString();
+                tboxCity.Text = Request.Cookies["City"].Value.ToString();
+                ddlStates.SelectedIndex = Convert.ToInt32(Request.Cookies["StateID"].Value);
+                tboxZip.Text = Request.Cookies["Zip"].Value.ToString();
             }
         }
 
@@ -122,7 +118,7 @@ namespace AudioMidwest.com
                 InsertCmd.CommandType = CommandType.StoredProcedure;
 
                 //input variables for each attribute in user table
-                InsertCmd.Parameters.AddWithValue("@AccountNumber", currentUser.UserID);
+                InsertCmd.Parameters.AddWithValue("@AccountNumber", Request.Cookies["UserID"].Value);
                 InsertCmd.Parameters.AddWithValue("@CustomerFirstName", tboxFirstName.Text);
                 InsertCmd.Parameters.AddWithValue("@CustomerLastName", tboxLastName.Text);
                 InsertCmd.Parameters.AddWithValue("@ShippingAddress", tboxPrimaryAddress.Text);
