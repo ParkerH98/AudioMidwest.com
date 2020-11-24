@@ -116,7 +116,7 @@
                 <div class="col-sm-4">
 
                     <div class="card mb-3 height position-relative">
-                        <img class="card-img-top d-block img-fluid mx-auto w-75 h-75"
+                        <img class="card-img-top d-block img-fluid mx-auto w-75 h-75 p-3"
                             src="Content/Images/speaker_focal.jpg" alt="Card image cap" />
 
                         <div class="card-body middle">
@@ -131,7 +131,7 @@
                         <div class="bottom">
                             <asp:HiddenField ID="hidSpeakerFocal" Value="1" runat="server" />
 
-                            <div class="row">
+                            <div class="row ml-1">
                                 <div class="col-sm-12">
                                     <label class="d-block">Quantity:</label>
                                     <asp:TextBox ID="tboxSpeakerFocal" CssClass="d-block w-75" runat="server"
@@ -139,7 +139,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row ml-1 mb-3 mt-1">
                                 <div class="col-sm-6">
                                     <asp:Button ID="btnSpeakerFocal" CssClass="btn btn-primary" runat="server"
                                         Text="Add to Cart" ValidationGroup="SpeakerFocal" OnClick="btnSpeakerFocal_Click" />
@@ -162,7 +162,7 @@
                 <div class="col-sm-4">
 
                     <div class="card mb-3 height position-relative">
-                        <img class="card-img-top d-block img-fluid mx-auto w-75 h-75"
+                        <img class="card-img-top d-block img-fluid mx-auto w-75 h-75 p-3"
                             src="Content/Images/speaker_kicker.jpg" alt="Card image cap" />
                         <div class="card-body middle">
                             <h5 class="card-title">Kicker KSS650 6.5-inch Component Speaker System</h5>
@@ -186,7 +186,7 @@
                                 </div>
                             </div>
 
-                            <div class="row ml-1 mb-1 mt-1">
+                            <div class="row ml-1 mb-3 mt-1">
                                 <div class="col-sm-6">
                                     <asp:Button ID="btnSpeakerKicker" CssClass="btn btn-primary" runat="server"
                                         Text="Add to Cart" ValidationGroup="SpeakerKicker" OnClick="btnSpeakerKicker_Click" />
@@ -209,7 +209,7 @@
                 <div class="col-sm-4">
 
                     <div class="card mb-3 height position-relative">
-                        <img class="card-img-top d-block img-fluid mx-auto w-75 h-75"
+                        <img class="card-img-top d-block img-fluid mx-auto w-75 h-75 p-5"
                             src="Content/Images/speaker_phoenix.jpg" alt="Card image cap" />
                         <div class="card-body middle">
                             <h5 class="card-title">Phoenix Gold RX 6.5" Component Speaker Set</h5>
@@ -223,7 +223,7 @@
                         <div class="bottom">
                             <asp:HiddenField ID="hidSpeakerPhoenix" Value="3" runat="server" />
 
-                            <div class="row">
+                            <div class="row ml-1">
                                 <div class="col-sm-12">
                                     <label class="d-block">Quantity:</label>
                                     <asp:TextBox ID="tboxSpeakerPhoenix" CssClass="d-block w-75" runat="server"
@@ -231,7 +231,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row ml-1 mb-3 mt-1">
                                 <div class="col-sm-6">
                                     <asp:Button ID="btnSpeakerPhoenix" CssClass="btn btn-primary" runat="server"
                                         Text="Add to Cart" ValidationGroup="SpeakerPhoenix" OnClick="btnSpeakerPhoenix_Click" />
@@ -259,7 +259,7 @@
                 <div class="col-sm-4">
 
                     <div class="card mb-3 height position-relative">
-                        <img class="card-img-top d-block img-fluid mx-auto w-75 h-75"
+                        <img class="card-img-top d-block img-fluid mx-auto w-75 h-75 p-3"
                             src="Content/Images/amp_sound.jpg" alt="Card image cap" />
                         <div class="card-body middle">
                             <h5 class="card-title">Sound Digital 800.1 EVO</h5>
@@ -271,7 +271,7 @@
                         <div class="bottom">
                             <asp:HiddenField ID="hidAmpSound" Value="4" runat="server" />
 
-                            <div class="row">
+                            <div class="row ml-1">
                                 <div class="col-sm-12">
                                     <label class="d-block">Quantity:</label>
                                     <asp:TextBox ID="tboxAmpSound" CssClass="d-block w-75" runat="server"
@@ -279,7 +279,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row ml-1 mb-3 mt-1">
                                 <div class="col-sm-6">
                                     <asp:Button ID="btnAmpSound" CssClass="btn btn-primary" runat="server"
                                         Text="Add to Cart" ValidationGroup="AmpSound" OnClick="btnAmpSound_Click" />
@@ -302,8 +302,8 @@
                 <div class="col-sm-4">
 
                     <div class="card mb-3 height position-relative">
-                        <img class="card-img-top d-block img-fluid mx-auto w-75 h-75"
-                            src="Content/Images/speaker_focal.jpg" alt="Card image cap" />
+                        <img class="card-img-top d-block img-fluid mx-auto w-75 h-75 p-3"
+                            src="Content/Images/amp_kicker.jpg" alt="Card image cap" />
                         <div class="card-body middle">
                             <h5 class="card-title">Kicker KXA 400.4 Amplifier</h5>
                             <p class="card-text">This KX 400-watt four channel amplifier is built to easily power your door speakers or be a full system solution. FIT2™ (Fail-Safe Integration Technology) ensures your amp works with nearly any stock or aftermarket radio.</p>
@@ -314,7 +314,7 @@
                         <div class="bottom">
                             <asp:HiddenField ID="hidAmpKicker" Value="5" runat="server" />
 
-                            <div class="row">
+                            <div class="row ml-1">
                                 <div class="col-sm-12">
                                     <label class="d-block">Quantity:</label>
                                     <asp:TextBox ID="tboxAmpKicker" CssClass="d-block w-75" runat="server"
@@ -322,7 +322,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row ml-1 mb-3 mt-1">
                                 <div class="col-sm-6">
                                     <asp:Button ID="btnAmpKicker" CssClass="btn btn-primary" runat="server"
                                         Text="Add to Cart" ValidationGroup="AmpKicker" OnClick="btnAmpKicker_Click" />
@@ -345,7 +345,7 @@
                 <div class="col-sm-4">
 
                     <div class="card mb-3 height position-relative">
-                        <img class="card-img-top d-block img-fluid mx-auto w-75 h-75"
+                        <img class="card-img-top d-block img-fluid mx-auto w-75 h-75 p-3"
                             src="Content/Images/amp_phoenix.jpg" alt="Card image cap" />
                         <div class="card-body middle">
                             <h5 class="card-title">Phoenix Gold GX 1200W 6-Channel Full Range Class D Amplifier</h5>
@@ -357,7 +357,7 @@
                         <div class="bottom">
                             <asp:HiddenField ID="hidAmpPhoenix" Value="6" runat="server" />
 
-                            <div class="row">
+                            <div class="row ml-1">
                                 <div class="col-sm-12">
                                     <label class="d-block">Quantity:</label>
                                     <asp:TextBox ID="tboxAmpPhoenix" CssClass="d-block w-75" runat="server"
@@ -365,7 +365,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row ml-1 mb-3 mt-1">
                                 <div class="col-sm-6">
                                     <asp:Button ID="btnAmpPhoenix" CssClass="btn btn-primary" runat="server"
                                         Text="Add to Cart" ValidationGroup="AmpPhoenix" OnClick="btnAmpPhoenix_Click" />
@@ -387,7 +387,7 @@
         </div>
         <%-- end of main container div --%>
 
-        <%-- footer conatiner --%>
+        <%-- footer container --%>
         <div class="container-fluid px-0">
 
             <footer class="bg-dark">
@@ -451,10 +451,21 @@
                                         <a href="contact.aspx">Contact</a>
                                     </li>
                                     <li>
-                                        <a href="login.aspx">Login</a>
+                                        <asp:HyperLink ID="footerLogin" runat="server" NavigateUrl="login.aspx">Login
+                                        </asp:HyperLink>
                                     </li>
                                     <li>
-                                        <a href="accountModification">Modify Account</a>
+                                        <asp:HyperLink ID="footerCreateAccount" runat="server"
+                                            NavigateUrl="accountCreation.aspx">Create Account</asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="footerAccountmodification" runat="server"
+                                            NavigateUrl="accountModification.aspx">Modify Account</asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:LinkButton ID="footerSignout" OnClick="btnSignOut_Click"
+                                            NavigateUrl="login.aspx" CausesValidation="False" runat="server">Sign Out
+                                        </asp:LinkButton>
                                     </li>
                                 </ul>
 

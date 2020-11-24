@@ -151,7 +151,7 @@
                     <div class="col-sm-12 text-center text-muted font-weight-bold mt-3 mb-5">
 
 
-                        <asp:Label ID="lblMessage" runat="server" Text="A test string that gives information to the user about a certain thing." class="col-form-label-sm"></asp:Label>
+                        <asp:Label ID="lblMessage" runat="server" Text="" class="col-form-label-sm"></asp:Label>
 
                     </div>
 
@@ -172,7 +172,7 @@
         </div>
         <%-- end of main container div --%>
 
-        <%-- footer conatiner --%>
+       <%-- footer container --%>
         <div class="container-fluid px-0">
 
             <footer class="bg-dark">
@@ -236,10 +236,21 @@
                                         <a href="contact.aspx">Contact</a>
                                     </li>
                                     <li>
-                                        <a href="login.aspx">Login</a>
+                                        <asp:HyperLink ID="footerLogin" runat="server" NavigateUrl="login.aspx">Login
+                                        </asp:HyperLink>
                                     </li>
                                     <li>
-                                        <a href="accountModification">Modify Account</a>
+                                        <asp:HyperLink ID="footerCreateAccount" runat="server"
+                                            NavigateUrl="accountCreation.aspx">Create Account</asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="footerAccountmodification" runat="server"
+                                            NavigateUrl="accountModification.aspx">Modify Account</asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:LinkButton ID="footerSignout" OnClick="btnSignOut_Click"
+                                            NavigateUrl="login.aspx" CausesValidation="False" runat="server">Sign Out
+                                        </asp:LinkButton>
                                     </li>
                                 </ul>
 

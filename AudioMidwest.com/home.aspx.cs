@@ -16,7 +16,7 @@ namespace AudioMidwest.com
 
             if (Session["visited"] != null)
             {
-                lblTxt.Text = "Welcome " + currentUser.FirstName;
+                lblTxt.Text = "Hello " + currentUser.FirstName;
                 Session["visited"] = null;
             }
             else
@@ -25,12 +25,17 @@ namespace AudioMidwest.com
             }
 
 
+            //if user is signed in, hide/display various navigation links in navbar and footer
             if (Session["currentUser"] != null)
             {
                 btnSignOut.Visible = true;
                 modifyAcctDD.Visible = true;
                 loginDD.Visible = false;
                 CreateAcctDD.Visible = false;
+                footerLogin.Visible = false;
+                footerCreateAccount.Visible = false;
+                footerAccountmodification.Visible = true;
+                footerSignout.Visible = true;
             }
             else
             {
@@ -38,6 +43,10 @@ namespace AudioMidwest.com
                 modifyAcctDD.Visible = false;
                 loginDD.Visible = true;
                 CreateAcctDD.Visible = true;
+                footerLogin.Visible = true;
+                footerCreateAccount.Visible = true;
+                footerAccountmodification.Visible = false;
+                footerSignout.Visible = false;
             }
         }
 

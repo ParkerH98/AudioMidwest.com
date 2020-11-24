@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
 
     <title>About Us</title>
@@ -15,13 +16,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <%-- google fonts --%>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet" />
 
     <%-- main style sheet --%>
     <link href="Content/CSS/aboutUs_styles.css" rel="stylesheet" />
 
 </head>
+
 <body>
     <form id="form1" runat="server">
 
@@ -67,10 +71,15 @@
                                 Account
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx" runat="server">Login</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD" NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD" NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
-                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click" NavigateUrl="login.aspx" CausesValidation="False" />
+                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx"
+                                    runat="server">Login</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD"
+                                    NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD"
+                                    NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
+                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out"
+                                    CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click"
+                                    NavigateUrl="login.aspx" CausesValidation="False" />
                             </div>
                         </li>
                     </ul>
@@ -87,8 +96,8 @@
 
                 <div class="col-sm-12 ml-3">
 
-                    <h1>Welcome to Audio Midwest</h1>
-                    <h2>Sellers and Installers of Premium AV Equipment</h2>
+                    <h1>About Us</h1>
+                    <h2>Locally Owned With a Passion for Sound</h2>
 
                 </div>
             </div>
@@ -111,17 +120,21 @@
                 <div class="col-sm-12 text-center">
 
                     <p class="justify squeeze">
-                        4K, OLED, or Smart TVs, our home theater experts can recommend and install the best in living
-                        room entertainment. We hang TVs of any size and only sell the best. If you’re looking for
-                        surround sound,
-                        we have the latest in discreet, in-ceiling solutions and hi-fi.
+                        Audio Midwest is a locally owned AV store that's been a presence in Oklahoma for almost 30
+                        years. Audio Midwest currently has two locations
+                        residing in Stillwater and Edmond Oklahoma. With a small number of locations, Audio Midwest is
+                        able to ensure the utmost quality installations and products. At Audio Midwest,
+                        we specialize in a large number of services some of which are AV home and car audio
+                        installations, remote start installations, window tinting, home construction prewiring,
+                        custom leather work and vinyl wrapping, custom subwoofer enclosures, in-car TV's, breathalyzers,
+                        and back-up cameras.
                     </p>
                 </div>
             </div>
         </div>
         <%-- end of main container div --%>
 
-        <%-- footer conatiner --%>
+       <%-- footer container --%>
         <div class="container-fluid px-0">
 
             <footer class="bg-dark">
@@ -185,10 +198,21 @@
                                         <a href="contact.aspx">Contact</a>
                                     </li>
                                     <li>
-                                        <a href="login.aspx">Login</a>
+                                        <asp:HyperLink ID="footerLogin" runat="server" NavigateUrl="login.aspx">Login
+                                        </asp:HyperLink>
                                     </li>
                                     <li>
-                                        <a href="accountModification">Modify Account</a>
+                                        <asp:HyperLink ID="footerCreateAccount" runat="server"
+                                            NavigateUrl="accountCreation.aspx">Create Account</asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="footerAccountmodification" runat="server"
+                                            NavigateUrl="accountModification.aspx">Modify Account</asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:LinkButton ID="footerSignout" OnClick="btnSignOut_Click"
+                                            NavigateUrl="login.aspx" CausesValidation="False" runat="server">Sign Out
+                                        </asp:LinkButton>
                                     </li>
                                 </ul>
 
@@ -217,4 +241,5 @@
         </div>
     </form>
 </body>
+
 </html>

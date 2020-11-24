@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
 
     <title>Audio Midwest</title>
@@ -15,8 +16,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <%-- google fonts --%>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet" />
 
     <%-- main style sheet --%>
     <link href="Content/CSS/home_styles.css" rel="stylesheet" />
@@ -68,10 +71,15 @@
                                 Account
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx" runat="server">Login</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD" NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
-                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD" NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
-                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click" NavigateUrl="login.aspx" CausesValidation="False" />
+                                <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx"
+                                    runat="server">Login</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD"
+                                    NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
+                                <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD"
+                                    NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
+                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out"
+                                    CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click"
+                                    NavigateUrl="login.aspx" CausesValidation="False" />
                             </div>
                         </li>
                     </ul>
@@ -103,7 +111,7 @@
 
                 <div class="col-sm-6 text-center">
 
-                    <h2h class="text-center">Car Audio</h2h>
+                    <h2 class="text-center">Car Audio</h2>
                     <p class="justify squeeze">
                         Audio, Video, or Remote Start, we are your local 12-volt expert. From subwoofers to in-car
                         entertainment systems, our expert installers can customize
@@ -127,7 +135,7 @@
         </div>
         <%-- end of main container div --%>
 
-        <%-- footer conatiner --%>
+        <%-- footer container --%>
         <div class="container-fluid px-0">
 
             <footer class="bg-dark">
@@ -191,10 +199,21 @@
                                         <a href="contact.aspx">Contact</a>
                                     </li>
                                     <li>
-                                        <a href="login.aspx">Login</a>
+                                        <asp:HyperLink ID="footerLogin" runat="server" NavigateUrl="login.aspx">Login
+                                        </asp:HyperLink>
                                     </li>
                                     <li>
-                                        <a href="accountModification">Modify Account</a>
+                                        <asp:HyperLink ID="footerCreateAccount" runat="server"
+                                            NavigateUrl="accountCreation.aspx">Create Account</asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="footerAccountmodification" runat="server"
+                                            NavigateUrl="accountModification.aspx">Modify Account</asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:LinkButton ID="footerSignout" OnClick="btnSignOut_Click"
+                                            NavigateUrl="login.aspx" CausesValidation="False" runat="server">Sign Out
+                                        </asp:LinkButton>
                                     </li>
                                 </ul>
 
