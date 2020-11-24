@@ -107,11 +107,9 @@ namespace AudioMidwest.com
             }
             else
             {
-                Session["logMsg"] = "Please login before continuing to checkout,";
+                Session["logMsg"] = "Please login before continuing to checkout.";
                 Response.Redirect("~/login.aspx");
             }
-
-           
         }
     }
 }

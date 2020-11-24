@@ -72,24 +72,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="aboutUs.aspx" />
     <Content Include="accountCreation.aspx" />
     <Content Include="accountModification.aspx" />
     <Content Include="cart.aspx" />
+    <Content Include="contact.aspx" />
     <Content Include="Content\Bootstrap\bootstrap-grid.css" />
     <Content Include="Content\Bootstrap\bootstrap-grid.min.css" />
     <Content Include="Content\Bootstrap\bootstrap-reboot.css" />
     <Content Include="Content\Bootstrap\bootstrap-reboot.min.css" />
     <Content Include="Content\Bootstrap\bootstrap.css" />
     <Content Include="Content\Bootstrap\bootstrap.min.css" />
-    <Content Include="Content\CSS\accountCreation_styles.css" />
-    <Content Include="Content\CSS\accountModification_styles.css" />
+    <Content Include="Content\CSS\aboutUs_styles.css" />
     <Content Include="Content\CSS\cart_styles.css" />
-    <Content Include="Content\CSS\login_styles.css" />
     <Content Include="Content\CSS\products_styles.css" />
+    <Content Include="Content\Images\aboutUs.jpg" />
     <Content Include="Content\Images\amLogo.jpg" />
     <Content Include="Content\CSS\home_styles.css" />
+    <Content Include="Content\Images\amp_kicker.jpg" />
+    <Content Include="Content\Images\amp_phoenix.jpg" />
+    <Content Include="Content\Images\amp_sound.jpg" />
     <Content Include="Content\Images\speaker_focal.jpg" />
     <Content Include="Content\Images\speaker_kicker.jpg" />
+    <Content Include="Content\Images\speaker_phoenix.jpg" />
     <Content Include="home.aspx" />
     <Content Include="login.aspx" />
     <Content Include="products.aspx" />
@@ -208,6 +213,13 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aboutUs.aspx.cs">
+      <DependentUpon>aboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aboutUs.aspx.designer.cs">
+      <DependentUpon>aboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="accountCreation.aspx.cs">
       <DependentUpon>accountCreation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -228,6 +240,13 @@
     </Compile>
     <Compile Include="cart.aspx.designer.cs">
       <DependentUpon>cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Content\Classes\CartItem.cs" />
     <Compile Include="Content\Classes\CartItemList.cs" />

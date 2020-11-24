@@ -1,6 +1,21 @@
 ﻿
 /*NEEDED FOR THIS PAGE*/
 
+/*formats paragraph*/
+.justify {
+    text-align: justify;
+    text-align-last: center;
+}
+
+.squeeze {
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+
+.no-margin {
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
 /*END NEEDED FOR THIS PAGE*/
 
 

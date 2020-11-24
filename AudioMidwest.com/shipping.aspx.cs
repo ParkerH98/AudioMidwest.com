@@ -75,19 +75,17 @@ namespace AudioMidwest.com
 
             using (SqlConnection sqlConnection = new SqlConnection(strConnection))
             {
-                
-
                 SqlCommand InsertCmd = new SqlCommand("spInsertMyOrder", sqlConnection);
                 InsertCmd.CommandType = CommandType.StoredProcedure;
 
                 //input variables for each attribute in user table
                 InsertCmd.Parameters.AddWithValue("@AccountNumber", currentUser.UserID);
-                InsertCmd.Parameters.AddWithValue("@CustomerFirstName", currentUser.FirstName);
-                InsertCmd.Parameters.AddWithValue("@CustomerLastName", currentUser.LastName);
-                InsertCmd.Parameters.AddWithValue("@ShippingAddress", currentUser.PrimaryAddress);
-                InsertCmd.Parameters.AddWithValue("@ShippingCity", currentUser.City);
-                InsertCmd.Parameters.AddWithValue("@ShippingState", currentUser.StateID);
-                InsertCmd.Parameters.AddWithValue("@ShippingZip", currentUser.Zipcode);
+                InsertCmd.Parameters.AddWithValue("@CustomerFirstName", tboxFirstName.Text);
+                InsertCmd.Parameters.AddWithValue("@CustomerLastName", tboxLastName.Text);
+                InsertCmd.Parameters.AddWithValue("@ShippingAddress", tboxPrimaryAddress.Text);
+                InsertCmd.Parameters.AddWithValue("@ShippingCity", tboxCity.Text);
+                InsertCmd.Parameters.AddWithValue("@ShippingState", ddlStates.SelectedValue);
+                InsertCmd.Parameters.AddWithValue("@ShippingZip", tboxZip.Text);
 
                 //create an output parameter to get an OH ID
                 SqlParameter OHIDOutput = new SqlParameter("@OrderNumber", SqlDbType.Int);
@@ -113,7 +111,6 @@ namespace AudioMidwest.com
                     //show error message
                     Console.WriteLine(ex.Message);
                 }
-
             }
         }
 

@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="AudioMidwest.com.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="aboutUs.aspx.cs" Inherits="AudioMidwest.com.aboutUs" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
-    <title>Login</title>
+    <title>About Us</title>
 
     <%-- Bootstrap --%>
     <script src="Scripts/jquery-3.5.1.min.js"></script>
@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet"/> 
 
     <%-- main style sheet --%>
-    <link href="Content/CSS/home_styles.css" rel="stylesheet" />
+    <link href="Content/CSS/aboutUs_styles.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -70,7 +70,7 @@
                                 <asp:HyperLink CssClass="dropdown-item" ID="loginDD" NavigateUrl="login.aspx" runat="server">Login</asp:HyperLink>
                                 <asp:HyperLink CssClass="dropdown-item" ID="CreateAcctDD" NavigateUrl="accountCreation.aspx" runat="server">Create Account</asp:HyperLink>
                                 <asp:HyperLink CssClass="dropdown-item" ID="modifyAcctDD" NavigateUrl="accountModification.aspx" runat="server">Modify Account</asp:HyperLink>
-                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click" NavigateUrl="login.aspx" />
+                                <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" CssClass="btn btn-outline-dark dropdown-item" OnClick="btnSignOut_Click" NavigateUrl="login.aspx" CausesValidation="False" />
                             </div>
                         </li>
                     </ul>
@@ -95,80 +95,29 @@
 
             <hr />
 
-            <div class="row space">
+            <div class="row">
 
-                    <div class="col-sm-3 text-right">
-                        <label class="col-form-label">User Name</label>
-                    </div>
+                <div class="col-sm-12">
 
-                    <div class="col-sm-6">
-                        <asp:TextBox ID="tboxUserName" class="form-control" runat="server"
-                            ControlToValidate="tboxUserName"></asp:TextBox>
-                        <small>
-                            <asp:RequiredFieldValidator ID="rfvUserName" runat="server"
-                                ErrorMessage="Please enter your user name." ControlToValidate="tboxUserName"
-                                ForeColor="Red"></asp:RequiredFieldValidator>
-                        </small>
-                    </div>
+                    <img src="Content/Images/aboutUs.jpg" class="img-fluid mx-auto d-block rounded" />
 
                 </div>
 
-                <div class="row space">
+            </div>
 
-                    <div class="col-sm-3 text-right">
-                        <label class="col-form-label">Password</label>
-                    </div>
+            <%-- paragraph row --%>
+            <div class="row mt-5 mb-5">
 
-                    <div class="col-sm-6">
-                        <asp:TextBox ID="tboxPassword" class="form-control" TextMode="Password" runat="server"></asp:TextBox>
+                <div class="col-sm-12 text-center">
 
-                        <small>
-                            <asp:RequiredFieldValidator ID="rfvPassword" runat="server"
-                                ErrorMessage="Please enter a valid password." ControlToValidate="tboxPassword"
-                                ForeColor="Red"></asp:RequiredFieldValidator>
-                        </small>
-                    </div>
-
+                    <p class="justify squeeze">
+                        4K, OLED, or Smart TVs, our home theater experts can recommend and install the best in living
+                        room entertainment. We hang TVs of any size and only sell the best. If you’re looking for
+                        surround sound,
+                        we have the latest in discreet, in-ceiling solutions and hi-fi.
+                    </p>
                 </div>
-
-                <div class="row">
-
-                    <div class="col-sm-6 text-right">
-
-                        
-
-                    </div>
-
-                    <div class="col-sm-6 offset-sm-6">
-                        <asp:Button ID="btnLogin" runat="server" class="btn btn-primary" Text="Login" OnClick="btnLogin_Click"/>
-                        <asp:Button ID="btnCreateAccoount" runat="server" class="btn btn-secondary"
-                            Text="Create Account" CausesValidation="False" OnClick="btnCreateAccoount_Click" />
-                    </div>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-sm-12 text-center text-muted font-weight-bold mt-3 mb-5">
-
-
-                        <asp:Label ID="lblMessage" runat="server" Text="A test string that gives information to the user about a certain thing." class="col-form-label-sm"></asp:Label>
-
-                    </div>
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </div>
         </div>
         <%-- end of main container div --%>
 

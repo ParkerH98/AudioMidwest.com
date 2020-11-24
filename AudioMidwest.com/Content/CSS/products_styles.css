@@ -8,11 +8,23 @@
 
 .middle {
     position: absolute;
-    top: 40%;
+    top: 25%;
 }
 
 .height{
     min-height : 50rem;
+}
+
+.width{
+    min-width: 95%;
+    max-width: 95%;
+}
+
+.card image {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 /*END NEEDED FOR THIS PAGE*/
 

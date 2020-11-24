@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace AudioMidwest.com
 {
-    public partial class thankYou : System.Web.UI.Page
+    public partial class contact : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,15 +24,6 @@ namespace AudioMidwest.com
                 modifyAcctDD.Visible = false;
                 loginDD.Visible = true;
                 CreateAcctDD.Visible = true;
-            }
-
-            string orderNum = Session["OrderID"].ToString();
-            User currentUser = (User)Session["currentUser"];
-
-
-            if (Session["OrderID"] != null)
-            {
-                lblOrderID.Text = "Thank you for your puchase " + currentUser.FirstName + ". Your order number is " + orderNum + ".";
             }
         }
 

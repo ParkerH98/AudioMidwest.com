@@ -181,7 +181,7 @@
                             <div class="row ml-1">
                                 <div class="col-sm-12">
                                     <label class="d-block">Quantity:</label>
-                                    <asp:TextBox ID="tboxSpeakerKicker" CssClass="d-block w-75" runat="server"
+                                    <asp:TextBox ID="tboxSpeakerKicker" CssClass="d-block width" runat="server"
                                         ValidationGroup="SpeakerKicker" TextMode="Number"></asp:TextBox>
                                 </div>
                             </div>
@@ -210,7 +210,7 @@
 
                     <div class="card mb-3 height position-relative">
                         <img class="card-img-top d-block img-fluid mx-auto w-75 h-75"
-                            src="Content/Images/speaker_focal.jpg" alt="Card image cap" />
+                            src="Content/Images/speaker_phoenix.jpg" alt="Card image cap" />
                         <div class="card-body middle">
                             <h5 class="card-title">Phoenix Gold RX 6.5" Component Speaker Set</h5>
                             <p class="card-text">The RX series of components and coaxials utilizes a high performance
@@ -260,7 +260,7 @@
 
                     <div class="card mb-3 height position-relative">
                         <img class="card-img-top d-block img-fluid mx-auto w-75 h-75"
-                            src="Content/Images/speaker_focal.jpg" alt="Card image cap" />
+                            src="Content/Images/amp_sound.jpg" alt="Card image cap" />
                         <div class="card-body middle">
                             <h5 class="card-title">Sound Digital 800.1 EVO</h5>
                             <p class="card-text">The EVO X Line brings the latest technology in a compact design with the highest quality components. From a pioneering technology, SounDigital brought to car audio amplifiers something that had not been explored yet.</p>
@@ -346,7 +346,7 @@
 
                     <div class="card mb-3 height position-relative">
                         <img class="card-img-top d-block img-fluid mx-auto w-75 h-75"
-                            src="Content/Images/speaker_focal.jpg" alt="Card image cap" />
+                            src="Content/Images/amp_phoenix.jpg" alt="Card image cap" />
                         <div class="card-body middle">
                             <h5 class="card-title">Phoenix Gold GX 1200W 6-Channel Full Range Class D Amplifier</h5>
                             <p class="card-text">Designed to cover a multitude of installation needs, GX is packed with the features and power you can expect from the Phoenix Gold brand. Included in the line are our proprietary PG quick connects for high current capability and reliability while delivering uber clean and quick installations. The chassis has been optimized by utilizing BFD (Balanced Flow Dissipation) to keep the amplifier running cool when the music is hot.</p>
