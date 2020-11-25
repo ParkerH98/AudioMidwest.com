@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net;
+using System.Net.Mail;
+
 
 namespace AudioMidwest.com
 {
@@ -35,6 +38,7 @@ namespace AudioMidwest.com
                 footerSignout.Visible = false;
             }
 
+            lblEmailMsg.Visible = false;
 
             if (Request.Cookies["FirstName"] != null)
             {
@@ -98,6 +102,40 @@ namespace AudioMidwest.com
             Response.Cookies.Add(cookieCurrentUserPassword);
 
             Response.Redirect("~/login.aspx");
+        }
+
+        protected void btnCreateAcct_Click(object sender, EventArgs e)
+        {
+            string emailFirst = tboxFirstName.Text;
+            string emailMessage = tboxMessage.Text;
+            string emailSenderEmail = tboxEmail.Text;
+            string toEmail = "parkerhague@gmail.com";
+
+            MailAddress fromAddress = new MailAddress(toEmail);
+            MailAddress toAddress = new MailAddress(toEmail);
+
+            SmtpClient smtp = new SmtpClient();
+
+            smtp.Host = "smtp.gmail.com";
+            smtp.Port = 587;
+            smtp.EnableSsl = true;
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = new NetworkCredential(toEmail, "Ph4058220384");
+
+            MailMessage mailMessage = new MailMessage(fromAddress, toAddress);
+
+            mailMessage.Subject = "Comment on AudioMidwest.com from " + tboxFirstName.Text + " " + tboxLastName.Text + ".";
+            mailMessage.Body = emailMessage;
+            smtp.Send(mailMessage);
+
+            tboxFirstName.Text = "";
+            tboxLastName.Text = "";
+            tboxPhoneNumber.Text = "";
+            tboxEmail.Text = "";
+            tboxMessage.Text = "";
+
+            lblEmailMsg.Visible = true;
         }
     }
 }

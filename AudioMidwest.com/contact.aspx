@@ -266,7 +266,15 @@
             <div class="row mb-5 mt-3">
 
                 <div class="col-sm-4 offset-sm-6">
-                    <asp:Button ID="btnCreateAcct" runat="server" Text="Submit" class="btn btn-dark" />
+                    <asp:Button ID="btnCreateAcct" runat="server" Text="Submit" class="btn btn-dark" OnClick="btnCreateAcct_Click" />
+                </div>
+
+            </div>
+
+            <div class="row mb-5 mt-3">
+
+                <div class="col-sm-12 text-center">
+                    <asp:Label ID="lblEmailMsg" CssClass="text-muted font-weight-bold" runat="server" Text="Your message has been sent." Visible="False"></asp:Label>
                 </div>
 
             </div>

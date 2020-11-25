@@ -177,6 +177,15 @@ namespace AudioMidwest.com
         protected global::System.Web.UI.WebControls.Button btnCreateAcct;
 
         /// <summary>
+        /// lblEmailMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEmailMsg;
+
+        /// <summary>
         /// footerLogin control.
         /// </summary>
         /// <remarks>
