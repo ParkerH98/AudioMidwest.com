@@ -121,7 +121,8 @@ namespace AudioMidwest.com
                 InsertCmd.Parameters.AddWithValue("@AccountNumber", Request.Cookies["UserID"].Value);
                 InsertCmd.Parameters.AddWithValue("@CustomerFirstName", tboxFirstName.Text);
                 InsertCmd.Parameters.AddWithValue("@CustomerLastName", tboxLastName.Text);
-                InsertCmd.Parameters.AddWithValue("@ShippingAddress", tboxPrimaryAddress.Text);
+                InsertCmd.Parameters.AddWithValue("@PrimaryShippingAddress", tboxPrimaryAddress.Text);
+                InsertCmd.Parameters.AddWithValue("@SecondaryShippingAddress", tboxSecondaryAddress.Text);
                 InsertCmd.Parameters.AddWithValue("@ShippingCity", tboxCity.Text);
                 InsertCmd.Parameters.AddWithValue("@ShippingState", ddlStates.SelectedValue);
                 InsertCmd.Parameters.AddWithValue("@ShippingZip", tboxZip.Text);

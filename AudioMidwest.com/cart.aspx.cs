@@ -145,14 +145,22 @@ namespace AudioMidwest.com
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
 
-            if (Request.Cookies["FirstName"] != null)
+            if (shoppingCart.Count > 0)
             {
-                Response.Redirect("~/shipping.aspx");
+                if (Request.Cookies["FirstName"] != null)
+                {
+                    Response.Redirect("~/shipping.aspx");
+                }
+                else
+                {
+                    Session["logMsg"] = "Please login before continuing to checkout.";
+                    Response.Redirect("~/login.aspx");
+                } 
             }
             else
             {
-                Session["logMsg"] = "Please login before continuing to checkout.";
-                Response.Redirect("~/login.aspx");
+                lblMessage.Visible = true;
+                lblMessage.Text = "Please select an item before checking out.";
             }
         }
     }
