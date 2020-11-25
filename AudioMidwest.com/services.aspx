@@ -33,7 +33,7 @@
 
             <%-- jumbotron --%>
             <div class="jumbotron-fluid blue">
-                <img src="Content/Images/amLogo.jpg" alt="Audio Midwest Logo" class="img-fluid mx-auto d-block" />
+                <img src="Content/Images/amLogo.jpg" alt="Audio Midwest Logo" class="img-fluid mx-auto d-block rounded" />
             </div>
 
             <%-- navigation bar --%>
@@ -119,15 +119,15 @@
                 <div class="row">
 
                     <div class="col-sm-4">
-                        <img src="Content/Images/car_1.jpg" />
+                        <img class="img-fluid mx-auto d-block rounded" src="Content/Images/car_1.jpg" />
                     </div>
 
                     <div class="col-sm-4">
-                        <img src="Content/Images/car_2.jpg" />
+                        <img class="img-fluid mx-auto d-block rounded" src="Content/Images/car_2.jpg" />
                     </div>
 
                     <div class="col-sm-4">
-                        <img src="Content/Images/car_3.jpg" />
+                        <img class="img-fluid mx-auto d-block rounded" src="Content/Images/car_3.jpg" />
                     </div>
                 </div>
 
@@ -161,15 +161,15 @@
                 <div class="row">
 
                     <div class="col-sm-4">
-                        <img src="Content/Images/home_1.jpg" />
+                        <img class="img-fluid mx-auto d-block rounded" src="Content/Images/home_1.jpg" />
                     </div>
 
                     <div class="col-sm-4">
-                        <img src="Content/Images/home_2.jpg" />
+                        <img class="img-fluid mx-auto d-block rounded" src="Content/Images/home_2.jpg" />
                     </div>
 
                     <div class="col-sm-4">
-                        <img src="Content/Images/home_3.jpg" />
+                        <img class="img-fluid mx-auto d-block rounded" src="Content/Images/home_3.jpg" />
                     </div>
                 </div>
 
@@ -203,15 +203,15 @@
                 <div class="row">
 
                     <div class="col-sm-4">
-                        <img src="Content/Images/tv_1.jpg" />
+                        <img class="img-fluid mx-auto d-block rounded" src="Content/Images/tv_1.jpg" />
                     </div>
 
                     <div class="col-sm-4">
-                        <img src="Content/Images/tv_2.jpg" />
+                        <img class="img-fluid mx-auto d-block rounded" src="Content/Images/tv_2.jpg" />
                     </div>
 
                     <div class="col-sm-4">
-                        <img src="Content/Images/tv_3.jpg" />
+                        <img class="img-fluid mx-auto d-block rounded" src="Content/Images/tv_3.jpg" />
                     </div>
                 </div>
 
@@ -245,15 +245,15 @@
                 <div class="row">
 
                     <div class="col-sm-4">
-                        <img src="Content/Images/prewire_1.jpg" />
+                        <img class="img-fluid mx-auto d-block rounded" src="Content/Images/prewire_1.jpg" />
                     </div>
 
                     <div class="col-sm-4">
-                        <img src="Content/Images/prewire_2.jpg" />
+                        <img class="img-fluid mx-auto d-block rounded" src="Content/Images/prewire_2.jpg" />
                     </div>
 
                     <div class="col-sm-4">
-                        <img src="Content/Images/prewire_3.jpg" />
+                        <img class="img-fluid mx-auto d-block rounded " src="Content/Images/prewire_3.jpg" />
                     </div>
                 </div>
 
