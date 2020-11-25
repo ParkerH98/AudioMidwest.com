@@ -398,6 +398,31 @@
                 <%-- End AmpPhoenix --%>
             </div>
             <%-- End Amplifier Row --%>
+
+            <div class="row">
+
+                <div class="col-sm-12 text-center">
+
+                    <h2>Product Review</h2>
+
+                </div>
+
+            </div>
+
+            <%-- video row --%>
+            <div class="row mb-5 mt-3">
+
+                <div class="col-sm-6 offset-sm-3">
+
+                    <div class="embed-responsive embed-responsive-4by3">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4K7JMEV01CA" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+
+            </div>
+
+
         </div>
         <%-- end of main container div --%>
 
