@@ -194,6 +194,9 @@ namespace AudioMidwest.com
                 }
                 else
                 {
+                    lblMessage.Visible = true;
+                    lblMessage.ForeColor = System.Drawing.Color.Red;
+                    lblMessage.Text = "The credentials entered are invalid. Please try again.";
 
                 }
             }
