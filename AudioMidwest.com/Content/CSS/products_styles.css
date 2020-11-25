@@ -81,3 +81,11 @@ footer a:hover {
     list-style-position: inside;
 }
 /*END NEEDED FOR ALL PAGES*/
+
+@media screen and (max-width: 768px){
+
+    .middle {
+        position: absolute;
+        top: 55%;
+    }
+}

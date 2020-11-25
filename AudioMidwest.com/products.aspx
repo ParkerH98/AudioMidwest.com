@@ -115,7 +115,7 @@
             <div class="row">
 
                 <%-- SpeakerFocal --%>
-                <div class="col-sm-4">
+                <div class="col-md-4">
 
                     <div class="card mb-3 height position-relative">
                         <img class="card-img-top d-block img-fluid mx-auto w-75 h-75 p-3"
@@ -162,7 +162,7 @@
 
 
                 <%-- SpeakerKicker --%>
-                <div class="col-sm-4">
+                <div class="col-md-4">
 
                     <div class="card mb-3 height position-relative">
                         <img class="card-img-top d-block img-fluid mx-auto w-75 h-75 p-3"
@@ -210,7 +210,7 @@
 
 
                 <%-- SpeakerPhoenix --%>
-                <div class="col-sm-4">
+                <div class="col-md-4">
 
                     <div class="card mb-3 height position-relative">
                         <img class="card-img-top d-block img-fluid mx-auto w-75 h-75 p-5"
@@ -261,7 +261,7 @@
             <div class="row">
 
                 <%-- AmpSound --%>
-                <div class="col-sm-4">
+                <div class="col-md-4">
 
                     <div class="card mb-3 height position-relative">
                         <img class="card-img-top d-block img-fluid mx-auto w-75 h-75 p-3"
@@ -306,7 +306,7 @@
 
 
                 <%-- AmpKicker --%>
-                <div class="col-sm-4">
+                <div class="col-md-4">
 
                     <div class="card mb-3 height position-relative">
                         <img class="card-img-top d-block img-fluid mx-auto w-75 h-75 p-3"
@@ -351,7 +351,7 @@
 
 
                 <%-- AmpPhoenix --%>
-                <div class="col-sm-4">
+                <div class="col-md-4">
 
                     <div class="card mb-3 height position-relative">
                         <img class="card-img-top d-block img-fluid mx-auto w-75 h-75 p-3"
