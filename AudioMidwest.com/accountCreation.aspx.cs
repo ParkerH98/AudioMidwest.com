@@ -46,28 +46,51 @@ namespace AudioMidwest.com
 
             using(SqlConnection sqlConnection = new SqlConnection(strConnection))
             {
-                sqlConnection.Open();
-                
-                SqlCommand InsertCmd = new SqlCommand("spInsertCredentials", sqlConnection);
-                InsertCmd.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    sqlConnection.Open();
 
-                //input variables for each attribute in user table
-                InsertCmd.Parameters.AddWithValue("@FirstName", tboxFirstName.Text);
-                InsertCmd.Parameters.AddWithValue("@LastName", tboxLastName.Text);
-                InsertCmd.Parameters.AddWithValue("@PrimaryAddress", tboxPrimaryAddress.Text);
-                InsertCmd.Parameters.AddWithValue("@SecondaryAddress", tboxSecondaryAddress.Text);
-                InsertCmd.Parameters.AddWithValue("@City", tboxCity.Text);
-                InsertCmd.Parameters.AddWithValue("@StateID", ddlStates.SelectedValue);
-                InsertCmd.Parameters.AddWithValue("@Zipcode", tboxZip.Text);
-                InsertCmd.Parameters.AddWithValue("@UserName", tboxEmail.Text);
-                InsertCmd.Parameters.AddWithValue("@UserPassword", tboxPassword.Text);
-                InsertCmd.Parameters.AddWithValue("@RecoveryEmail", tboxAccountRecoveryEmail.Text);
-                InsertCmd.Parameters.AddWithValue("@PhoneNumber", tboxPhoneNumber.Text);
+                    SqlCommand InsertCmd = new SqlCommand("spInsertCredentials", sqlConnection);
+                    InsertCmd.CommandType = CommandType.StoredProcedure;
 
-                InsertCmd.ExecuteNonQuery();
+                    //input variables for each attribute in user table
+                    InsertCmd.Parameters.AddWithValue("@FirstName", tboxFirstName.Text);
+                    InsertCmd.Parameters.AddWithValue("@LastName", tboxLastName.Text);
+                    InsertCmd.Parameters.AddWithValue("@PrimaryAddress", tboxPrimaryAddress.Text);
+                    InsertCmd.Parameters.AddWithValue("@SecondaryAddress", tboxSecondaryAddress.Text);
+                    InsertCmd.Parameters.AddWithValue("@City", tboxCity.Text);
+                    InsertCmd.Parameters.AddWithValue("@StateID", ddlStates.SelectedValue);
+                    InsertCmd.Parameters.AddWithValue("@Zipcode", tboxZip.Text);
+                    InsertCmd.Parameters.AddWithValue("@UserName", tboxEmail.Text);
+                    InsertCmd.Parameters.AddWithValue("@UserPassword", tboxPassword.Text);
+                    InsertCmd.Parameters.AddWithValue("@RecoveryEmail", tboxAccountRecoveryEmail.Text);
+                    InsertCmd.Parameters.AddWithValue("@PhoneNumber", tboxPhoneNumber.Text);
 
-                Session["CreateAccountMsg"] = "Your account has successfully been created. Please login.";
-                Response.Redirect("~/login.aspx");
+                    InsertCmd.ExecuteNonQuery();
+
+                    Session["CreateAccountMsg"] = "Your account has successfully been created. Please login.";
+                    Response.Redirect("~/login.aspx");
+                }
+                catch (SqlException ex)
+                {
+
+                    if (ex.Number == 2627)
+                    {
+                        lblMsg.Visible = true;
+                        lblMsg.ForeColor = System.Drawing.Color.Red;
+                        lblMsg.Text = "The email address " + tboxEmail.Text + " already exists in our records. Please enter a different email or sign in.";
+                    }
+                    
+                }
+                catch (Exception ex)
+                {
+
+                   
+                    lblMsg.ForeColor = System.Drawing.Color.Red;
+                    lblMsg.Text = ex.Message;
+                    
+
+                }
             }
         }
 

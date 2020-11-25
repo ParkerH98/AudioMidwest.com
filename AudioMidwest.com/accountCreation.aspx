@@ -502,11 +502,19 @@
 
             </div>
 
+            <div class="row mb-5 mt-3">
+
+                <div class="col-sm-12 text-center">
+                    <asp:Label CssClass="text-muted font-weight-bold" ID="lblMsg" runat="server" Text="" Visible="False"></asp:Label>
+                </div>
+
+            </div>
+
         </div>
         <%-- end of main container div --%>
 
         <%-- footer container --%>
-        <div class="container-fluid px-0 bottom">
+        <div class="container-fluid px-0">
 
             <footer class="bg-dark">
 
