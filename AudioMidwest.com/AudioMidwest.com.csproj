@@ -92,6 +92,12 @@
     <Content Include="Content\Images\amp_kicker.jpg" />
     <Content Include="Content\Images\amp_phoenix.jpg" />
     <Content Include="Content\Images\amp_sound.jpg" />
+    <Content Include="Content\Images\car_1.jpg" />
+    <Content Include="Content\Images\car_2.jpg" />
+    <Content Include="Content\Images\car_3.jpg" />
+    <Content Include="Content\Images\home_1.jpg" />
+    <Content Include="Content\Images\home_2.jpg" />
+    <Content Include="Content\Images\home_3.jpg" />
     <Content Include="Content\Images\logo_denon.jpg" />
     <Content Include="Content\Images\logo_focal.jpg" />
     <Content Include="Content\Images\logo_kenwood.jpg" />
@@ -102,9 +108,15 @@
     <Content Include="Content\Images\logo_sony.jpg" />
     <Content Include="Content\Images\logo_sound.jpg" />
     <Content Include="Content\Images\logo_yamaha.jpg" />
+    <Content Include="Content\Images\prewire_1.jpg" />
+    <Content Include="Content\Images\prewire_2.jpg" />
+    <Content Include="Content\Images\prewire_3.jpg" />
     <Content Include="Content\Images\speaker_focal.jpg" />
     <Content Include="Content\Images\speaker_kicker.jpg" />
     <Content Include="Content\Images\speaker_phoenix.jpg" />
+    <Content Include="Content\Images\tv_1.jpg" />
+    <Content Include="Content\Images\tv_2.jpg" />
+    <Content Include="Content\Images\tv_3.jpg" />
     <Content Include="home.aspx" />
     <Content Include="login.aspx" />
     <Content Include="products.aspx" />
@@ -208,6 +220,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="services.aspx" />
     <Content Include="shipping.aspx" />
     <Content Include="thankYou.aspx" />
     <Content Include="Web.config" />
@@ -284,6 +297,13 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Content\Classes\User.cs" />
+    <Compile Include="services.aspx.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="services.aspx.designer.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+    </Compile>
     <Compile Include="shipping.aspx.cs">
       <DependentUpon>shipping.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

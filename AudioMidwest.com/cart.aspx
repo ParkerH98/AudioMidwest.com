@@ -106,13 +106,13 @@
 
             <div class="row">
 
-                <div class="col-sm-6">
+                <div class="col-sm-7">
 
                     <asp:ListBox ID="lboxCartsummary" CssClass="cart" runat="server"></asp:ListBox>
 
                 </div>
 
-                <div class="col-sm-6">
+                <div class="col-sm-5">
 
                     <asp:Button ID="btnRemove" CssClass="btn btn-dark mb-2 d-block" runat="server" Text="Remove Item"
                         OnClick="btnRemove_Click" />
@@ -134,23 +134,12 @@
                     <asp:Button ID="btnCheckout" CssClass="btn btn-secondary" runat="server" Text="Checkout"
                         OnClick="btnCheckout_Click" />
                 </div>
-
             </div>
-
-
-
-
-
-
-
-
-
-
         </div>
         <%-- end of main container div --%>
 
         <%-- footer container --%>
-        <div class="container-fluid px-0 bottom">
+        <div class="container-fluid px-0">
 
             <footer class="bg-dark">
 

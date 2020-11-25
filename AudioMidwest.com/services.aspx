@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="AudioMidwest.com.contact" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="services.aspx.cs" Inherits="AudioMidwest.com.services" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +6,7 @@
 
 <head runat="server">
 
-    <title>Contact Us</title>
+    <title>Services</title>
 
     <%-- Bootstrap --%>
     <script src="Scripts/jquery-3.5.1.min.js"></script>
@@ -96,181 +96,180 @@
 
                 <div class="col-sm-12 ml-3">
 
-                    <h1>Questions, Comments, or Concerns?</h1>
-                    <h2>Leave a Message Below and We'll Be Happy to Reply</h2>
+                    <asp:Label ID="lblTxt" runat="server" Text=""></asp:Label>
+
+                    <h1>Services</h1>
+                    <h2>We Offer a Wide Variety of Professional Installations</h2>
 
                 </div>
             </div>
 
             <hr />
 
-            <%-- first name row --%>
-            <div class="row mb-2">
+            <%-- car audio container --%>
+            <div class="container">
 
-                <%-- label column --%>
-                <div class="col-sm-4 text-right">
-                    <label class="col-form-label">First Name</label>
+                <div class="row mb-3">
+
+                    <div class="col-sm-12 text-center">
+                        <h2>Car Audio</h2>
+                    </div>
                 </div>
 
-                <%-- user input column --%>
-                <div class="col-sm-4">
+                <div class="row">
 
-                    <asp:TextBox ID="tboxFirstName" class="form-control" runat="server"></asp:TextBox>
+                    <div class="col-sm-4">
+                        <img src="Content/Images/car_1.jpg" />
+                    </div>
 
-                    <small>
-                        <asp:RequiredFieldValidator ID="rfvFirstName" runat="server"
-                            ErrorMessage="Please enter your first name." ControlToValidate="tboxFirstName"
-                            ForeColor="Red" Display="Dynamic">
-                        </asp:RequiredFieldValidator>
-                    </small>
+                    <div class="col-sm-4">
+                        <img src="Content/Images/car_2.jpg" />
+                    </div>
 
+                    <div class="col-sm-4">
+                        <img src="Content/Images/car_3.jpg" />
+                    </div>
                 </div>
 
-                <%-- validation column --%>
-                <div class="col-sm-4 pt-2">
-                </div>
+                <div class="row mt-3 mb-5">
 
+                    <div class="col-sm-12 justify squeeze">
+                        <p>Premium car audio is one of the best ways to get enjoyment out of your favorite music. We
+                            have a large variety of car audio products we can professionally install including head
+                            units, door speakers, subwoofers, amplifiers, DSPs, and LOCs. We use professional tools like
+                            RTAs and oscilloscopes to ensure the highest fidelity sound from the installation.
+                        </p>
+                    </div>
+                </div>
             </div>
+            <%-- end car audio container --%>
 
 
-            <%-- last name row --%>
-            <div class="row mb-2">
+            <hr />
 
-                <%-- label column --%>
-                <div class="col-sm-4 text-right">
-                    <label class="col-form-label">Last Name</label>
+
+            <%-- home audio container --%>
+            <div class="container">
+
+                <div class="row mb-3">
+
+                    <div class="col-sm-12 text-center">
+                        <h2>Home Audio</h2>
+                    </div>
                 </div>
 
-                <%-- user input column --%>
-                <div class="col-sm-4">
+                <div class="row">
 
-                    <asp:TextBox ID="tboxLastName" class="form-control" runat="server"></asp:TextBox>
+                    <div class="col-sm-4">
+                        <img src="Content/Images/home_1.jpg" />
+                    </div>
 
-                    <small>
-                        <asp:RequiredFieldValidator ID="rfvLastName" runat="server"
-                            ErrorMessage="Please enter your last name." ControlToValidate="tboxLastName" ForeColor="Red"
-                            Display="Dynamic">
-                        </asp:RequiredFieldValidator>
-                    </small>
+                    <div class="col-sm-4">
+                        <img src="Content/Images/home_2.jpg" />
+                    </div>
 
+                    <div class="col-sm-4">
+                        <img src="Content/Images/home_3.jpg" />
+                    </div>
                 </div>
 
-                <%-- validation column --%>
-                <div class="col-sm-4 pt-2">
-                </div>
+                <div class="row mt-3 mb-5">
 
+                    <div class="col-sm-12 justify squeeze">
+                        <p>Want to take your home get togethers to the next level? Upgrading your home audio system can
+                            provide the music for the party or supply the sound on movie night. We offer thr latest
+                            receivers and home speakers
+                            to provide you with the best experience. Let us enhance your home audio setup with a Dolby
+                            7.1.2 surround sound system. It'll be your best purchase yet.
+                        </p>
+                    </div>
+                </div>
             </div>
+            <%-- end home audio container --%>
+
+            <hr />
 
 
-            <%-- email row --%>
-            <div class="row mb-2">
+            <%-- tv container --%>
+            <div class="container">
 
-                <%-- label column --%>
-                <div class="col-sm-4 text-right">
-                    <label class="col-form-label">Email</label>
+                <div class="row mb-3">
+
+                    <div class="col-sm-12 text-center">
+                        <h2>Televisions</h2>
+                    </div>
                 </div>
 
-                <%-- user input column --%>
-                <div class="col-sm-4">
+                <div class="row">
 
-                    <asp:TextBox ID="tboxEmail" class="form-control" runat="server"></asp:TextBox>
+                    <div class="col-sm-4">
+                        <img src="Content/Images/tv_1.jpg" />
+                    </div>
 
-                    <small>
-                        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="Please enter your email."
-                            ControlToValidate="tboxEmail" ForeColor="Red" Display="Dynamic">
-                        </asp:RequiredFieldValidator>
+                    <div class="col-sm-4">
+                        <img src="Content/Images/tv_2.jpg" />
+                    </div>
 
-                        <%-- regex format email validator --%>
-                        <asp:RegularExpressionValidator ID="regexEmail" runat="server"
-                            ErrorMessage="Please enter a valid email." ControlToValidate="tboxEmail"
-                            ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"
-                            ForeColor="Red">
-                        </asp:RegularExpressionValidator>
-                    </small>
-
+                    <div class="col-sm-4">
+                        <img src="Content/Images/tv_3.jpg" />
+                    </div>
                 </div>
 
-                <%-- validation column --%>
-                <div class="col-sm-4 pt-2">
-                </div>
+                <div class="row mt-3 mb-5">
 
+                    <div class="col-sm-12 justify squeeze">
+                        <p>Want to enjoy the latest movies without going to the movie theatre? Come get a brand new 70"
+                            4K OLED TV and you can do just that. A new TV will be great for those football Sundays or
+                            movie nights.
+                            We offer a wide variety of brands from Sony to LG including OLED and LCD displays.
+                        </p>
+                    </div>
+                </div>
             </div>
+            <%-- end tv container --%>
 
 
-            <%-- phone number row --%>
-            <div class="row mb-2">
+            <hr />
 
-                <%-- label column --%>
-                <div class="col-sm-4 text-right">
-                    <label class="col-form-label">Phone Number</label>
+
+            <%--  prewire container --%>
+            <div class="container">
+
+                <div class="row mb-3">
+
+                    <div class="col-sm-12 text-center">
+                        <h2>Construction Prewiring</h2>
+                    </div>
                 </div>
 
-                <%-- user input column --%>
-                <div class="col-sm-4">
+                <div class="row">
 
-                    <asp:TextBox ID="tboxPhoneNumber" class="form-control" runat="server"></asp:TextBox>
+                    <div class="col-sm-4">
+                        <img src="Content/Images/prewire_1.jpg" />
+                    </div>
 
-                    <small>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
-                            ErrorMessage="Please enter a phone number." ControlToValidate="tboxPhoneNumber"
-                            ForeColor="Red" Display="Dynamic">
-                        </asp:RequiredFieldValidator>
+                    <div class="col-sm-4">
+                        <img src="Content/Images/prewire_2.jpg" />
+                    </div>
 
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
-                            ErrorMessage="Please enter a valid US phone number." ControlToValidate="tboxPhoneNumber"
-                            ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}" Display="Dynamic"
-                            ForeColor="Red">
-                        </asp:RegularExpressionValidator>
-                    </small>
-
+                    <div class="col-sm-4">
+                        <img src="Content/Images/prewire_3.jpg" />
+                    </div>
                 </div>
 
-                <%-- validation column --%>
-                <div class="col-sm-4">
-                </div>
+                <div class="row mt-3 mb-5">
 
+                    <div class="col-sm-12 justify squeeze">
+                        <p>Prewiring is a great option if you're building a home and already know you're going to have a
+                            home audio system. Prewiring allows us to run speakerwire throughout the house
+                            without having to deal with hindrances like sheetrock and insulation. This option can save
+                            on labor costs and allows for certain audio solutions that may not have been available
+                            otherwise.
+                        </p>
+                    </div>
+                </div>
             </div>
-
-
-            <%-- paragraph row --%>
-            <div class="row mb-2">
-
-                <%-- label column --%>
-                <div class="col-sm-4 text-right">
-                    <label class="col-form-label">Message</label>
-                </div>
-
-                <%-- user input column --%>
-                <div class="col-sm-4">
-
-                    <asp:TextBox ID="tboxMessage" class="form-control" runat="server" TextMode="MultiLine">
-                    </asp:TextBox>
-
-                    <small>
-                        <asp:RequiredFieldValidator ID="rfvMessage" runat="server"
-                            ErrorMessage="Please leave a message." ControlToValidate="tboxMessage" ForeColor="Red"
-                            Display="Dynamic">
-                        </asp:RequiredFieldValidator>
-
-                    </small>
-
-                </div>
-
-                <%-- validation column --%>
-                <div class="col-sm-4 pt-2">
-                </div>
-
-            </div>
-
-
-            <div class="row mb-5 mt-3">
-
-                <div class="col-sm-4 offset-sm-6">
-                    <asp:Button ID="btnCreateAcct" runat="server" Text="Submit" class="btn btn-dark" />
-                </div>
-
-            </div>
-
+            <%-- end prewire container --%>
         </div>
         <%-- end of main container div --%>
 
@@ -381,6 +380,5 @@
         </div>
     </form>
 </body>
-<script src="Scripts/format.js"></script>
 
 </html>
