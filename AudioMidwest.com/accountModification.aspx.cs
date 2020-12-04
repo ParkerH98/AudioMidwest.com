@@ -41,7 +41,7 @@ namespace AudioMidwest.com
           
             if (Request.Cookies["FirstName"] != null)
             {
-                tboxFirstName.Text = Request.Cookies["FirstName"].Value;
+                tboxFirstName.Text = Request.Cookies["FirstName"].Value.ToString();
                 tboxLastName.Text = Request.Cookies["LastName"].Value.ToString();
                 tboxEmail.Text = Request.Cookies["Email"].Value.ToString();
                 tboxPassword.Text = Request.Cookies["UserPassword"].Value.ToString();
@@ -81,6 +81,51 @@ namespace AudioMidwest.com
                 InsertCmd.Parameters.AddWithValue("@PhoneNumber", tboxPhoneNumber.Text);
 
                 InsertCmd.ExecuteNonQuery();
+
+                HttpCookie cookieCurrentUserFirstName = new HttpCookie("FirstName");
+                cookieCurrentUserFirstName.Value = tboxFirstName.Text;
+                cookieCurrentUserFirstName.Expires = DateTime.Now.AddHours(1);
+                Response.Cookies.Add(cookieCurrentUserFirstName);
+
+                HttpCookie cookieCurrentUserLastName = new HttpCookie("LastName");
+                cookieCurrentUserLastName.Value = tboxLastName.Text;
+                cookieCurrentUserLastName.Expires = DateTime.Now.AddHours(1);
+                Response.Cookies.Add(cookieCurrentUserLastName);
+
+                HttpCookie cookieCurrentUserPrimaryAddress = new HttpCookie("PrimaryAddress");
+                cookieCurrentUserPrimaryAddress.Value = tboxPrimaryAddress.Text;
+                cookieCurrentUserPrimaryAddress.Expires = DateTime.Now.AddHours(1);
+                Response.Cookies.Add(cookieCurrentUserPrimaryAddress);
+
+                HttpCookie cookieCurrentUserSecondaryAddress = new HttpCookie("SecondaryAddress");
+                cookieCurrentUserSecondaryAddress.Value = tboxSecondaryAddress.Text;
+                cookieCurrentUserSecondaryAddress.Expires = DateTime.Now.AddHours(1);
+                Response.Cookies.Add(cookieCurrentUserSecondaryAddress);
+
+                HttpCookie cookieCurrentUserCity = new HttpCookie("City");
+                cookieCurrentUserCity.Value = tboxCity.Text;
+                cookieCurrentUserCity.Expires = DateTime.Now.AddHours(1);
+                Response.Cookies.Add(cookieCurrentUserCity);
+
+                HttpCookie cookieCurrentUserStateID = new HttpCookie("StateID");
+                cookieCurrentUserStateID.Value = ddlStates.SelectedValue.ToString();
+                cookieCurrentUserStateID.Expires = DateTime.Now.AddHours(1);
+                Response.Cookies.Add(cookieCurrentUserStateID);
+
+                HttpCookie cookieCurrentUserZip = new HttpCookie("Zip");
+                cookieCurrentUserZip.Value = tboxZip.Text;
+                cookieCurrentUserZip.Expires = DateTime.Now.AddHours(1);
+                Response.Cookies.Add(cookieCurrentUserZip);
+
+                HttpCookie cookieCurrentUserPhoneNumber = new HttpCookie("PhoneNumber");
+                cookieCurrentUserPhoneNumber.Value = tboxPhoneNumber.Text;
+                cookieCurrentUserPhoneNumber.Expires = DateTime.Now.AddHours(1);
+                Response.Cookies.Add(cookieCurrentUserPhoneNumber);
+
+                HttpCookie cookieCurrentUserPassword = new HttpCookie("UserPassword");
+                cookieCurrentUserPassword.Value = tboxPassword.Text;
+                cookieCurrentUserPassword.Expires = DateTime.Now.AddHours(1);
+                Response.Cookies.Add(cookieCurrentUserPassword);
 
                 lblMessage.Visible = true;
             }
