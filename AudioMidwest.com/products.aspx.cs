@@ -98,7 +98,7 @@ namespace AudioMidwest.com
 
         protected void btnSpeakerFocal_Click(object sender, EventArgs e)
         {
-            Session["shopping"] = "true";
+            
             selectedProduct = GetSelectedProduct(Convert.ToInt32(hidSpeakerFocal.Value));
 
             if (IsValid)
@@ -180,7 +180,7 @@ namespace AudioMidwest.com
 
         protected void btnSpeakerKicker_Click(object sender, EventArgs e)
         {
-            Session["shopping"] = "true";
+            
             selectedProduct = GetSelectedProduct(Convert.ToInt32(hidSpeakerKicker.Value));
 
             if (IsValid)
@@ -207,7 +207,7 @@ namespace AudioMidwest.com
 
         protected void btnSpeakerPhoenix_Click(object sender, EventArgs e)
         {
-            Session["shopping"] = "true";
+            
             selectedProduct = GetSelectedProduct(Convert.ToInt32(hidSpeakerPhoenix.Value));
 
             if (IsValid)
@@ -234,7 +234,7 @@ namespace AudioMidwest.com
 
         protected void btnAmpSound_Click(object sender, EventArgs e)
         {
-            Session["shopping"] = "true";
+            
             selectedProduct = GetSelectedProduct(Convert.ToInt32(hidAmpSound.Value));
 
             if (IsValid)
@@ -261,7 +261,7 @@ namespace AudioMidwest.com
 
         protected void btnAmpKicker_Click(object sender, EventArgs e)
         {
-            Session["shopping"] = "true";
+            
             selectedProduct = GetSelectedProduct(Convert.ToInt32(hidAmpKicker.Value));
 
             if (IsValid)
@@ -288,7 +288,7 @@ namespace AudioMidwest.com
 
         protected void btnAmpPhoenix_Click(object sender, EventArgs e)
         {
-            Session["shopping"] = "true";
+            
             selectedProduct = GetSelectedProduct(Convert.ToInt32(hidAmpPhoenix.Value));
 
             if (IsValid)

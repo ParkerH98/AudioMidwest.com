@@ -144,7 +144,7 @@ namespace AudioMidwest.com
 
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
-
+            Session["shopping"] = "true";
             if (shoppingCart.Count > 0)
             {
                 if (Request.Cookies["FirstName"] != null)

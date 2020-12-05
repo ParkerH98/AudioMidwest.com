@@ -104,14 +104,16 @@ namespace AudioMidwest.com
             Response.Redirect("~/login.aspx");
         }
 
+        // sends email to Strom 
         protected void btnCreateAcct_Click(object sender, EventArgs e)
         {
             string emailFirst = tboxFirstName.Text;
             string emailMessage = tboxMessage.Text;
-            string emailSenderEmail = tboxEmail.Text;
-            string toEmail = "parkerhague@gmail.com";
+            string emailSenderEmail = "parkerhague@gmail.com";
+            string toEmail = "kim.strom@okstate.edu";
 
-            MailAddress fromAddress = new MailAddress(toEmail);
+            // builds address objects
+            MailAddress fromAddress = new MailAddress(emailSenderEmail);
             MailAddress toAddress = new MailAddress(toEmail);
 
             SmtpClient smtp = new SmtpClient();
@@ -121,7 +123,7 @@ namespace AudioMidwest.com
             smtp.EnableSsl = true;
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential(toEmail, "Ph4058220384");
+            smtp.Credentials = new NetworkCredential(emailSenderEmail, "Ph4058220384");
 
             MailMessage mailMessage = new MailMessage(fromAddress, toAddress);
 
