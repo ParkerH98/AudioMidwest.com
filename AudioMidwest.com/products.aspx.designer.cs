@@ -105,6 +105,15 @@ namespace AudioMidwest.com
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSpeakerFocal;
 
         /// <summary>
+        /// rngSpeakerFocal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rngSpeakerFocal;
+
+        /// <summary>
         /// hidSpeakerKicker control.
         /// </summary>
         /// <remarks>
@@ -139,6 +148,15 @@ namespace AudioMidwest.com
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSpeakerKicker;
+
+        /// <summary>
+        /// rngSpeakerKicker control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rngSpeakerKicker;
 
         /// <summary>
         /// hidSpeakerPhoenix control.
@@ -177,6 +195,15 @@ namespace AudioMidwest.com
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSpeakerPhoenix;
 
         /// <summary>
+        /// rngSpeakerPhoenix control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rngSpeakerPhoenix;
+
+        /// <summary>
         /// hidAmpSound control.
         /// </summary>
         /// <remarks>
@@ -211,6 +238,15 @@ namespace AudioMidwest.com
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAmpSound;
+
+        /// <summary>
+        /// rngAmpSound control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rngAmpSound;
 
         /// <summary>
         /// hidAmpKicker control.
@@ -249,6 +285,15 @@ namespace AudioMidwest.com
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAmpKicker;
 
         /// <summary>
+        /// rngAmpKicker control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rngAmpKicker;
+
+        /// <summary>
         /// hidAmpPhoenix control.
         /// </summary>
         /// <remarks>
@@ -283,6 +328,15 @@ namespace AudioMidwest.com
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAmpPhoenix;
+
+        /// <summary>
+        /// rngAmpPhoenix control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rngAmpPhoenix;
 
         /// <summary>
         /// footerLogin control.

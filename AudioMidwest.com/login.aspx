@@ -96,8 +96,8 @@
 
                 <div class="col-sm-12 ml-3">
 
-                    <h1>Welcome to Audio Midwest</h1>
-                    <h2>Sellers and Installers of Premium AV Equipment</h2>
+                    <h1>Login</h1>
+                    <h2>Login to Experience Features Throughout Our Site</h2>
 
                 </div>
             </div>
@@ -157,7 +157,8 @@
                 </div>
             </div>
 
-            <div class="row">
+            <%-- label message row --%>
+            <div class="row mb-5">
 
                 <div class="col-sm-12 text-center text-muted font-weight-bold mt-3 mb-5">
 

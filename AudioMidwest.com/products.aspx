@@ -153,6 +153,11 @@
                                         ErrorMessage="Please enter a quantity." ControlToValidate="tboxSpeakerFocal"
                                         ValidationGroup="SpeakerFocal" Display="Dynamic" ForeColor="Red">
                                     </asp:RequiredFieldValidator>
+                                    <asp:RangeValidator ID="rngSpeakerFocal" runat="server"
+                                        ErrorMessage="Please enter a number between 1 and 10."
+                                        ControlToValidate="tboxSpeakerFocal" ValidationGroup="SpeakerFocal"
+                                        MaximumValue="10" MinimumValue="1" ForeColor="Red">
+                                    </asp:RangeValidator>
                                 </div>
                             </div>
                         </div>
@@ -201,6 +206,11 @@
                                         ErrorMessage="Please enter a quantity." ControlToValidate="tboxSpeakerKicker"
                                         ValidationGroup="SpeakerKicker" Display="Dynamic" ForeColor="Red">
                                     </asp:RequiredFieldValidator>
+                                    <asp:RangeValidator ID="rngSpeakerKicker" runat="server"
+                                        ErrorMessage="Please enter a number between 1 and 10."
+                                        ControlToValidate="tboxSpeakerKicker" ValidationGroup="SpeakerKicker"
+                                        MaximumValue="10" MinimumValue="1" ForeColor="Red">
+                                    </asp:RangeValidator>
                                 </div>
                             </div>
                         </div>
@@ -247,6 +257,11 @@
                                         ErrorMessage="Please enter a quantity." ControlToValidate="tboxSpeakerPhoenix"
                                         ValidationGroup="SpeakerPhoenix" Display="Dynamic" ForeColor="Red">
                                     </asp:RequiredFieldValidator>
+                                    <asp:RangeValidator ID="rngSpeakerPhoenix" runat="server"
+                                        ErrorMessage="Please enter a number between 1 and 10."
+                                        ControlToValidate="tboxSpeakerPhoenix" ValidationGroup="SpeakerPhoenix"
+                                        MaximumValue="10" MinimumValue="1" ForeColor="Red">
+                                    </asp:RangeValidator>
                                 </div>
                             </div>
                         </div>
@@ -297,6 +312,11 @@
                                         ErrorMessage="Please enter a quantity." ControlToValidate="tboxAmpSound"
                                         ValidationGroup="AmpSound" Display="Dynamic" ForeColor="Red">
                                     </asp:RequiredFieldValidator>
+                                    <asp:RangeValidator ID="rngAmpSound" runat="server"
+                                        ErrorMessage="Please enter a number between 1 and 10."
+                                        ControlToValidate="tboxAmpSound" ValidationGroup="AmpSound"
+                                        MaximumValue="10" MinimumValue="1" ForeColor="Red">
+                                    </asp:RangeValidator>
                                 </div>
                             </div>
                         </div>
@@ -342,6 +362,11 @@
                                         ErrorMessage="Please enter a quantity." ControlToValidate="tboxAmpKicker"
                                         ValidationGroup="AmpKicker" Display="Dynamic" ForeColor="Red">
                                     </asp:RequiredFieldValidator>
+                                    <asp:RangeValidator ID="rngAmpKicker" runat="server"
+                                        ErrorMessage="Please enter a number between 1 and 10."
+                                        ControlToValidate="tboxAmpKicker" ValidationGroup="AmpKicker"
+                                        MaximumValue="10" MinimumValue="1" ForeColor="Red">
+                                    </asp:RangeValidator>
                                 </div>
                             </div>
                         </div>
@@ -390,6 +415,11 @@
                                         ErrorMessage="Please enter a quantity." ControlToValidate="tboxAmpPhoenix"
                                         ValidationGroup="AmpPhoenix" Display="Dynamic" ForeColor="Red">
                                     </asp:RequiredFieldValidator>
+                                    <asp:RangeValidator ID="rngAmpPhoenix" runat="server"
+                                        ErrorMessage="Please enter a number between 1 and 10."
+                                        ControlToValidate="tboxAmpPhoenix" ValidationGroup="AmpPhoenix"
+                                        MaximumValue="10" MinimumValue="1" ForeColor="Red">
+                                    </asp:RangeValidator>
                                 </div>
                             </div>
                         </div>
@@ -415,7 +445,8 @@
                 <div class="col-sm-6 offset-sm-3">
 
                     <div class="embed-responsive embed-responsive-4by3">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4K7JMEV01CA" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4K7JMEV01CA"
+                            allowfullscreen></iframe>
                     </div>
 
                 </div>

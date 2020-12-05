@@ -104,6 +104,7 @@
 
             <hr />
 
+            <%-- cartbox row --%>
             <div class="row">
 
                 <div class="col-sm-7">

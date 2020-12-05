@@ -104,6 +104,7 @@
 
             <hr />
 
+            <%-- main image --%>
             <div class="row">
 
                 <div class="col-sm-12">
