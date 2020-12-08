@@ -39,19 +39,24 @@ namespace AudioMidwest.com
             }
 
           
-            if (Request.Cookies["FirstName"] != null)
+            if (!IsPostBack)
             {
-                tboxFirstName.Text = Request.Cookies["FirstName"].Value.ToString();
-                tboxLastName.Text = Request.Cookies["LastName"].Value.ToString();
-                tboxEmail.Text = Request.Cookies["Email"].Value.ToString();
-                tboxPassword.Text = Request.Cookies["UserPassword"].Value.ToString();
-                tboxPhoneNumber.Text = Request.Cookies["PhoneNumber"].Value.ToString();
-                tboxPrimaryAddress.Text = Request.Cookies["PrimaryAddress"].Value.ToString();
-                tboxSecondaryAddress.Text = Request.Cookies["SecondaryAddress"].Value.ToString();
-                tboxCity.Text = Request.Cookies["City"].Value.ToString();
-                ddlStates.SelectedIndex = Convert.ToInt32(Request.Cookies["StateID"].Value);
-                tboxZip.Text = Request.Cookies["Zip"].Value.ToString();
+                if (Request.Cookies["FirstName"] != null)
+                {
+                    tboxFirstName.Text = Request.Cookies["FirstName"].Value.ToString();
+                    tboxLastName.Text = Request.Cookies["LastName"].Value.ToString();
+                    tboxEmail.Text = Request.Cookies["Email"].Value.ToString();
+                    tboxPassword.Text = Request.Cookies["UserPassword"].Value.ToString();
+                    tboxPhoneNumber.Text = Request.Cookies["PhoneNumber"].Value.ToString();
+                    tboxPrimaryAddress.Text = Request.Cookies["PrimaryAddress"].Value.ToString();
+                    tboxSecondaryAddress.Text = Request.Cookies["SecondaryAddress"].Value.ToString();
+                    tboxCity.Text = Request.Cookies["City"].Value.ToString();
+                    ddlStates.SelectedIndex = Convert.ToInt32(Request.Cookies["StateID"].Value);
+                    tboxZip.Text = Request.Cookies["Zip"].Value.ToString();
+                }
             }
+
+            
             
             lblMessage.Visible = false;
         }

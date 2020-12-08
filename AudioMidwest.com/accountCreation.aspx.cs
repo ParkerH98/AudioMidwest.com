@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
+using System.Web;
 
 namespace AudioMidwest.com
 {
@@ -44,7 +40,7 @@ namespace AudioMidwest.com
             //creates db connection string
             string strConnection = ConfigurationManager.ConnectionStrings["F20_ksphagueConnectionString"].ToString();
 
-            using(SqlConnection sqlConnection = new SqlConnection(strConnection))
+            using (SqlConnection sqlConnection = new SqlConnection(strConnection))
             {
                 try
                 {
@@ -77,18 +73,17 @@ namespace AudioMidwest.com
                     if (ex.Number == 2627)
                     {
                         lblMsg.Visible = true;
-                        lblMsg.ForeColor = System.Drawing.Color.Red;
                         lblMsg.Text = "The email address " + tboxEmail.Text + " already exists in our records. Please enter a different email or sign in.";
                     }
-                    
+
                 }
                 catch (Exception ex)
                 {
 
-                   
+
                     lblMsg.ForeColor = System.Drawing.Color.Red;
                     lblMsg.Text = ex.Message;
-                    
+
 
                 }
             }

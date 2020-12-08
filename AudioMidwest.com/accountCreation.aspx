@@ -505,7 +505,7 @@
             <div class="row mb-5 mt-3">
 
                 <div class="col-sm-12 text-center">
-                    <asp:Label CssClass="text-muted font-weight-bold" ID="lblMsg" runat="server" Text="" Visible="False"></asp:Label>
+                    <asp:Label CssClass="text-muted font-weight-bold" ID="lblMsg" runat="server" Text="" Visible="False" ForeColor="Red"></asp:Label>
                 </div>
 
             </div>
