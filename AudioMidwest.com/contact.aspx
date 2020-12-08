@@ -22,7 +22,7 @@
         rel="stylesheet" />
 
     <%-- main style sheet --%>
-    <link href="Content/CSS/home_styles.css" rel="stylesheet" />
+    <link href="Content/CSS/accountCreation_styles.css" rel="stylesheet" />
 
 </head>
 
@@ -108,7 +108,7 @@
             <div class="row mb-2">
 
                 <%-- label column --%>
-                <div class="col-sm-4 text-right">
+                <div class="col-sm-4 lbl-right">
                     <label class="col-form-label">First Name</label>
                 </div>
 
@@ -137,7 +137,7 @@
             <div class="row mb-2">
 
                 <%-- label column --%>
-                <div class="col-sm-4 text-right">
+                <div class="col-sm-4 lbl-right">
                     <label class="col-form-label">Last Name</label>
                 </div>
 
@@ -166,7 +166,7 @@
             <div class="row mb-2">
 
                 <%-- label column --%>
-                <div class="col-sm-4 text-right">
+                <div class="col-sm-4 lbl-right">
                     <label class="col-form-label">Email</label>
                 </div>
 
@@ -201,7 +201,7 @@
             <div class="row mb-2">
 
                 <%-- label column --%>
-                <div class="col-sm-4 text-right">
+                <div class="col-sm-4 lbl-right">
                     <label class="col-form-label">Phone Number</label>
                 </div>
 
@@ -236,7 +236,7 @@
             <div class="row mb-2">
 
                 <%-- label column --%>
-                <div class="col-sm-4 text-right">
+                <div class="col-sm-4 lbl-right">
                     <label class="col-form-label">Message</label>
                 </div>
 
